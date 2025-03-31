@@ -1,7 +1,7 @@
 """
 The file contains pure QA class for evaluation and training
 """
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import List, Dict, Any, Optional, Union, Tuple
 import re
 
@@ -231,15 +231,17 @@ class QA:
     A class for question and answer pair
     
     Attributes:
-        question (str): the question string
-        answer (Any): the answer to the question
+        dataset_name (str): name of the dataset (stepgame, spatial_qa, ...)
         question_type (str): type of the question (exploration, direction, rotation, ego2allo, allo2ego)
-        type (str): type of QA (EgoSS, EgoSD, ...)
+        type (str): type of the SpatialQA (EgoSS, EgoSD, ...)
     """
     question: str
     answer: str | List[str] | List[int]
     question_type: str
-    type: str 
+    type: str
+    extra_data: Dict[str, Any] = field(default_factory=dict)
+    dataset_name: str = field(default='spatial_qa', init=False)
+    
 
     def __post_init__(self):
         if self.question_type not in ['exploration', 'direction', 'rotation', 'ego2allo', 'allo2ego']:
@@ -250,16 +252,19 @@ class QA:
             'question': self.question,
             'answer': self.answer,
             'question_type': self.question_type,
-            'type': self.type
+            'dataset_name': self.dataset_name,
+            'type': self.type,
+            'extra_data': self.extra_data,
         }
 
     @classmethod
-    def from_dict(cls, data: Dict) -> 'QA':
+    def from_dict(cls, data: Dict) -> 'SpatialQA':
         return cls(
             question=data['question'],
             answer=data['answer'],
+            extra_data=data['extra_data'],
             question_type=data['question_type'],
-            type=data['type']
+            type=data['type'],
         )
 
     def evaluate(self, pred: str) -> bool:
