@@ -595,22 +595,30 @@ class ALFREDInterface(BaseInterface):
         final_info = {'llm_raw_response': preprocess_result.llm_raw_response}
         done = False
         
-        for act in preprocess_result.action_list:
-            if done:
-                break
-                
-            # Execute action in environment
-            obs, env_reward, done, info = self.env.step(act)
-            reward += env_reward
-            final_info.update(info)
+        # Initialize obs with a default value in case no valid actions are executed
+        obs = {'head_rgb': None}
+        
+        # Only execute actions if there are valid ones
+        if preprocess_result.action_list:
+            for act in preprocess_result.action_list:
+                if done:
+                    break
+                    
+                # Execute action in environment
+                obs, env_reward, done, info = self.env.step(act)
+                reward += env_reward
+                final_info.update(info)
+            
+            # Get RGB image for observation
+            env_state = obs.get('head_rgb', None)
+            if env_state is not None:
+                env_state = convert_numpy_to_PIL(env_state)
+        else:
+            # If no valid actions were executed, create a blank image
+            env_state = Image.new('RGB', (100, 100), color='black')
         
         # Update trajectory reward
         self.traj_reward += reward
-        
-        # Get RGB image for observation
-        env_state = obs.get('head_rgb', None)
-        if env_state is not None:
-            env_state = convert_numpy_to_PIL(env_state)
         
         # Create observation
         text_template = self.action_template.format(

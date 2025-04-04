@@ -6,7 +6,7 @@ from scipy import spatial
 from PIL import Image, ImageDraw, ImageFont
 import logging
 
-from vagen.env.eb_alfred.env.thor_env import ThorEnv
+from vagen.env.eb_alfred.envdir.thor_env import ThorEnv
 from vagen.env.eb_alfred.gen import constants
 from vagen.env.eb_alfred.gen.utils.game_util import get_objects_with_name_and_prop
 from vagen.env.eb_alfred.utils import natural_word_to_ithor_name
