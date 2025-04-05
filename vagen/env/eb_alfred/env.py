@@ -19,11 +19,11 @@ from vagen.env.base import BaseEnv, BaseInterface, IMAGE_PLACEHOLDER
 from vagen.env.utils import convert_numpy_to_PIL, preprocess, postprocess
 
 # global information
-X_DISPLAY = '1'
+X_DISPLAY = '2'
 #@TODO path
-ALFRED_SPLIT_PATH = os.path.join(os.getcwd(), 'data/splits/splits.json')
-ALFRED_REWARD_PATH = os.path.join(os.getcwd(), 'models/config/rewards.json')
-ALFRED_DATASET_PATH = os.path.join(os.getcwd(), 'data/json_2.1.0')
+ALFRED_SPLIT_PATH = os.path.join(os.getcwd(), 'ragen/env/eb_alfred/data/splits/splits.json')
+ALFRED_REWARD_PATH = os.path.join(os.getcwd(), 'ragen/env/eb_alfred/models/config/rewards.json')
+ALFRED_DATASET_PATH = os.path.join(os.getcwd(), 'ragen/env/eb_alfred/data/json_2.1.0')
 ValidEvalSets = [
     'base', 'common_sense', 'complex_instruction', 'spatial', 
     'visual_appearance', 'long_horizon'
