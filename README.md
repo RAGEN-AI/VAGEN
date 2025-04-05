@@ -102,6 +102,16 @@ cd ../vagen
 
 wandb login # login into wandb
 
+# for alfred
+cd vagen/env/eb_alfred/data
+wget https://ai2-vision-alfred.s3-us-west-2.amazonaws.com/json_feat_2.1.0.7z
+sudo apt-get install -y p7zip-full
+7z x json_feat_2.1.0.7z
+cd ../../../
+apt-get install -y pciutils
+apt-get install -y xorg xserver-xorg-core xserver-xorg-video-dummy
+python vagen/env/eb-alfred/startx.py 2
+
 # Then, you can run
 bash vagen/examples/release_experiments/gae.sh # rico-gae
 bash vagen/examples/release_experiments/grpo_mask_loss.sh # rico-grpo + loss mask

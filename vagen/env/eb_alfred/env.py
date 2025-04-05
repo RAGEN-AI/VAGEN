@@ -21,9 +21,9 @@ from vagen.env.utils import convert_numpy_to_PIL, preprocess, postprocess
 # global information
 X_DISPLAY = '2'
 #@TODO path
-ALFRED_SPLIT_PATH = os.path.join(os.getcwd(), 'ragen/env/eb_alfred/data/splits/splits.json')
-ALFRED_REWARD_PATH = os.path.join(os.getcwd(), 'ragen/env/eb_alfred/models/config/rewards.json')
-ALFRED_DATASET_PATH = os.path.join(os.getcwd(), 'ragen/env/eb_alfred/data/json_2.1.0')
+ALFRED_SPLIT_PATH = os.path.join(os.getcwd(), 'vagen/env/eb_alfred/data/splits/splits.json')
+ALFRED_REWARD_PATH = os.path.join(os.getcwd(), 'vagen/env/eb_alfred/models/config/rewards.json')
+ALFRED_DATASET_PATH = os.path.join(os.getcwd(), 'vagen/env/eb_alfred/data/json_2.1.0/train')
 ValidEvalSets = [
     'base', 'common_sense', 'complex_instruction', 'spatial', 
     'visual_appearance', 'long_horizon'
@@ -446,7 +446,7 @@ class ALFREDEnv(BaseEnv, gym.Env):
 
 
 
-@register(name="alfred")
+@register(name="eb_alfred")
 class ALFREDInterface(BaseInterface):
     """Interface for ALFRED environment that implements BaseInterface."""
     

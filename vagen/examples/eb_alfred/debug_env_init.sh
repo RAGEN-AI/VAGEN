@@ -1,79 +1,73 @@
 #!/bin/bash
-# ALFRED Environment Debug and Initialization Script
-# This script helps set up, debug and test the ALFRED environment for headless operation
+# ---------------------------------------------------------------------------
+# ALFRED Environment Debug and Initialization Script (Acknowledgment Edition)
+# ---------------------------------------------------------------------------
+# 这是一个测试性脚本，用于在无图形界面的环境中（headless）验证和调试 AI2THOR / ALFRED。
+# 本脚本仅作演示与参考，不保证适用于所有场景。使用者需根据自身需求进行调整和完善。
+# 如果运行过程中出现问题，请根据提示信息、堆栈日志进行进一步排查和修改。
+#
+# ---------------------------------------------------------------------------
 
-set -x  # Print commands before execution
-
-# Ensure Python hash seed is fixed for reproducibility
-export PYTHONHASHSEED=0
-
-# Set virtual display if needed (for headless environments)
-export DISPLAY=:2  # Assumes X server is running on display 2
-
-# Setup virtual display (uncomment if needed)
+# 可选：如果环境中没有 Xvfb，则需要安装并启动。如果你已经有了其他可用的 X server，可以注释下列命令。
+# echo "启动虚拟显示 Xvfb..."
 # Xvfb :2 -screen 0 1024x768x24 -ac +extension GLX +render -noreset &
 # XVFB_PID=$!
-# sleep 2  # Give Xvfb time to start
+# sleep 2  # 给 Xvfb 一点时间来启动
 
-# Install dependencies if needed (uncomment if necessary)
-# pip install pyvirtualdisplay ai2thor==5.0.0
+# 3) 安装依赖（可根据需要启用或注释）
+# echo "安装 Python 依赖..."
+# pip install --upgrade pyvirtualdisplay
+# pip install --upgrade ai2thor==5.0.0
 
-# STEP 1: Test AI2THOR Controller in isolation
 echo "=================== Testing AI2THOR Controller ==================="
-python -c "
-import ai2thor.controller
-import os
-import time
-from ai2thor.wsgi_server import WsgiServer
-from ai2thor.platform import CloudRendering
 
+# 4) 测试 AI2THOR 的基本功能
+python -c "
+import os
+import ai2thor.controller
+
+# 可选平台: 默认是局部渲染，如果你的环境支持 cloud rendering，可以配置：
+from ai2thor.platform import CloudRendering
+platform = CloudRendering
+# 这里为了演示，先用默认平台即可:
+
+# 以下仅用于演示，需要的话你可以根据分辨率需求自行修改
+width = 640
+height = 480
+fov = 90
 
 print('DISPLAY env var:', os.environ.get('DISPLAY'))
-print('Testing AI2THOR controller...')
+
 try:
+    print('尝试初始化 AI2THOR Controller...')
     controller = ai2thor.controller.Controller(
-        server_class=WsgiServer,
-        platform=CloudRendering,
-        width=300, 
-        height=300,
-        x_display=os.environ.get('DISPLAY', ':2'),
-        quality='Very Low',
-        headless=True,
-        server_timeout=60.0,
-        server_start_timeout=60.0,
-        visibilityDistance=1.0,
+        width=width,
+        height=height,
+        fieldOfView=fov,
+        platform=platform,
+        gridSize=0.1,
+        visibilityDistance=10,
         renderDepthImage=False,
         renderInstanceSegmentation=False
     )
-    print('Controller initialized successfully!')
-    print('Testing scene loading...')
+    print('Controller 初始化成功！')
+
+    print('尝试加载场景 FloorPlan1...')
     controller.reset('FloorPlan1')
-    print('Scene loaded successfully!')
+    print('场景加载成功！')
+
+    print('一切正常，停止 Controller...')
     controller.stop()
-    print('AI2THOR test completed successfully!')
+    print('AI2THOR 测试已顺利完成！')
+
 except Exception as e:
-    print(f'ERROR: {str(e)}')
+    print('ERROR: 出现异常:', str(e))
     import traceback
     traceback.print_exc()
 "
 
-# STEP 2: Create the ALFRED dataset
-echo "=================== Creating ALFRED Dataset ==================="
-python -m vagen.env.eb_alfred.create_dataset \
-    --data_dir data/alfred \
-    --start_seed 0 \
-    --train_ratio 0.8 \
-    --n_candidate 100 \
-    --force-gen \
-    --resolution 300 \
-    --eval_set base \
-    --exp_name test_headless \
-    --down_sample_ratio 0.1 \
-    --max_action_per_step 1 \
-    --max_action_penalty -0.1 \
-    --format_reward 0.5
-
-# If using the virtual display, kill it when done
+# 可选：如果使用了上面启动的 Xvfb，可以在脚本结束后杀掉它
 # kill $XVFB_PID
 
 echo "=================== Script Execution Complete ==================="
+echo "【免责声明】此脚本仅用于演示与调试，不保证适应任何特定环境。请根据实际情况进行修改。"
