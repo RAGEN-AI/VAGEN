@@ -1,0 +1,1514 @@
+{
+    "base": [
+        {
+            "task": "pick_clean_then_place_in_recep-Ladle-None-DiningTable-4/trial_T20190909_164840_568811",
+            "repeat_idx": 2,
+            "instruction": "Rinse off a ladle and move it to the table."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Spoon-Plate-DiningTable-15/trial_T20190907_112652_334388",
+            "repeat_idx": 1,
+            "instruction": "Set plate with a spoon in it on the kitchen table"
+        },
+        {
+            "task": "pick_two_obj_and_place-ToiletPaper-None-Toilet-408/trial_T20190909_080302_174780",
+            "repeat_idx": 0,
+            "instruction": "Put two rolls of toilet paper on the back of a toilet."
+        },
+        {
+            "task": "pick_and_place_simple-HandTowel-None-BathtubBasin-419/trial_T20190908_023400_293044",
+            "repeat_idx": 2,
+            "instruction": "Put a towel in a tub."
+        },
+        {
+            "task": "pick_and_place_simple-SprayBottle-None-Toilet-422/trial_T20190909_124835_952557",
+            "repeat_idx": 2,
+            "instruction": "Put a bottle on the back of the toilet."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-ButterKnife-Cup-SinkBasin-7/trial_T20190908_233333_221307",
+            "repeat_idx": 1,
+            "instruction": "Put a glass with a butter knife in it and put them in a sink."
+        },
+        {
+            "task": "look_at_obj_in_light-RemoteControl-None-FloorLamp-218/trial_T20190907_164342_432289",
+            "repeat_idx": 2,
+            "instruction": "Pick up a remote and turn on a lamp"
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Spatula-None-DiningTable-4/trial_T20190909_002804_564168",
+            "repeat_idx": 1,
+            "instruction": "Put a clean spatula on a wooden table."
+        },
+        {
+            "task": "look_at_obj_in_light-Pillow-None-FloorLamp-223/trial_T20190906_201007_149137",
+            "repeat_idx": 0,
+            "instruction": "hold a pillow while turning on a lamp"
+        },
+        {
+            "task": "pick_two_obj_and_place-CD-None-Drawer-304/trial_T20190907_230232_832893",
+            "repeat_idx": 0,
+            "instruction": "Move two CDs to the bottom drawer of the desk."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Lettuce-None-CounterTop-16/trial_T20190909_051630_092360",
+            "repeat_idx": 1,
+            "instruction": "rinse off lettuce and put it down on the counter top"
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Watch-Bowl-Shelf-326/trial_T20190909_031836_927615",
+            "repeat_idx": 1,
+            "instruction": "Put a bowl with the watch in it on the shelf."
+        },
+        {
+            "task": "pick_two_obj_and_place-SoapBar-None-Toilet-412/trial_T20190908_071602_531614",
+            "repeat_idx": 0,
+            "instruction": "To move two bars of soap to the back of the toilet. "
+        },
+        {
+            "task": "pick_and_place_simple-Bowl-None-CoffeeTable-201/trial_T20190907_171639_045329",
+            "repeat_idx": 1,
+            "instruction": "Put a bowl on a coffee table."
+        },
+        {
+            "task": "pick_and_place_simple-Newspaper-None-Sofa-224/trial_T20190909_111324_949106",
+            "repeat_idx": 0,
+            "instruction": "Place a newspaper on a couch."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-LettuceSliced-None-CounterTop-19/trial_T20190909_005709_232606",
+            "repeat_idx": 2,
+            "instruction": "put a clean slice of lettuce on to the counter"
+        },
+        {
+            "task": "look_at_obj_in_light-KeyChain-None-FloorLamp-204/trial_T20190909_030908_402835",
+            "repeat_idx": 1,
+            "instruction": "Look at a set of keys under a lit tall lamp."
+        },
+        {
+            "task": "pick_two_obj_and_place-Book-None-Desk-302/trial_T20190906_181233_363875",
+            "repeat_idx": 2,
+            "instruction": "Relocate two books to a bedroom desk."
+        },
+        {
+            "task": "pick_and_place_simple-Mug-None-SideTable-329/trial_T20190909_032318_169393",
+            "repeat_idx": 1,
+            "instruction": "Move a coffee mug to a nightstand."
+        },
+        {
+            "task": "pick_and_place_simple-SoapBar-None-Cart-401/trial_T20190907_054906_608944",
+            "repeat_idx": 1,
+            "instruction": "Move the bar of soap from the shelves to the metal rack. "
+        },
+        {
+            "task": "pick_two_obj_and_place-KeyChain-None-Shelf-207/trial_T20190909_131701_482365",
+            "repeat_idx": 2,
+            "instruction": "Put two sets of keys on the shelf."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Plate-None-CounterTop-19/trial_T20190908_212725_836398",
+            "repeat_idx": 0,
+            "instruction": "Put a clean plate on the counter."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-AppleSliced-None-DiningTable-27/trial_T20190907_151802_277016",
+            "repeat_idx": 3,
+            "instruction": "Put a clean apple slice on the table. "
+        },
+        {
+            "task": "look_at_obj_in_light-RemoteControl-None-FloorLamp-213/trial_T20190907_070857_687585",
+            "repeat_idx": 2,
+            "instruction": "Turn on the lamp while holding the remote."
+        },
+        {
+            "task": "pick_and_place_simple-Book-None-Sofa-229/trial_T20190907_042856_259139",
+            "repeat_idx": 1,
+            "instruction": "move the book to the couch "
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Pencil-Bowl-Dresser-311/trial_T20190909_002301_857761",
+            "repeat_idx": 1,
+            "instruction": "Put the bowl with pencil in it on the tv stand"
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-TomatoSliced-None-Microwave-20/trial_T20190918_161337_246067",
+            "repeat_idx": 0,
+            "instruction": "Place a rinsed slice of tomato in the microwave"
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-ButterKnife-Cup-DiningTable-23/trial_T20190908_233553_192059",
+            "repeat_idx": 1,
+            "instruction": "Place a glass cup with butter knife it on the table."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Lettuce-None-Fridge-19/trial_T20190908_100138_446072",
+            "repeat_idx": 1,
+            "instruction": "Put washed lettuce in the refrigerator."
+        },
+        {
+            "task": "look_at_obj_in_light-RemoteControl-None-FloorLamp-213/trial_T20190907_070857_687585",
+            "repeat_idx": 1,
+            "instruction": "Examine a tv remote next to the light of a tall lamp."
+        },
+        {
+            "task": "pick_two_obj_and_place-Book-None-Desk-302/trial_T20190906_181233_363875",
+            "repeat_idx": 4,
+            "instruction": "Put the books on the desk."
+        },
+        {
+            "task": "pick_two_obj_and_place-Book-None-Desk-313/trial_T20190908_125930_920681",
+            "repeat_idx": 0,
+            "instruction": "Move two books from the bed to the desk."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Watch-Bowl-SideTable-326/trial_T20190907_183137_838565",
+            "repeat_idx": 2,
+            "instruction": "Move a bowl with a watch inside from the desk to the side table."
+        },
+        {
+            "task": "look_at_obj_in_light-KeyChain-None-FloorLamp-204/trial_T20190909_030908_402835",
+            "repeat_idx": 2,
+            "instruction": "pick up keys, turn on lamp."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-AppleSliced-Pot-Fridge-24/trial_T20190909_064046_163660",
+            "repeat_idx": 5,
+            "instruction": "Put a pan with an apple in it in the fridge."
+        },
+        {
+            "task": "pick_and_place_simple-CellPhone-None-Bed-324/trial_T20190907_233817_198528",
+            "repeat_idx": 1,
+            "instruction": "Put a phone on a bed."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Cloth-None-Cabinet-405/trial_T20190907_080903_889497",
+            "repeat_idx": 2,
+            "instruction": "Put a cleaned washcloth away in a cabinet."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-ButterKnife-Cup-DiningTable-23/trial_T20190908_233553_192059",
+            "repeat_idx": 0,
+            "instruction": "Put a cup with a butter knife in it on the kitchen island."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Spatula-Pan-CounterTop-17/trial_T20190906_194903_710920",
+            "repeat_idx": 1,
+            "instruction": "place a sauce pan with a spatula in it on the kitchen counter"
+        },
+        {
+            "task": "pick_two_obj_and_place-CreditCard-None-Dresser-311/trial_T20190907_201917_045715",
+            "repeat_idx": 0,
+            "instruction": "Put two credit cards on a dresser."
+        },
+        {
+            "task": "pick_and_place_simple-HandTowel-None-BathtubBasin-408/trial_T20190908_053502_505422",
+            "repeat_idx": 2,
+            "instruction": "Carry a towel to the bath tub"
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-DishSponge-None-BathtubBasin-427/trial_T20190906_234735_610018",
+            "repeat_idx": 1,
+            "instruction": "Place a cleaned sponge in a bathtub."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Ladle-None-CounterTop-8/trial_T20190909_121908_219603",
+            "repeat_idx": 0,
+            "instruction": "Place a clean ladle on a counter."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Spoon-Cup-SinkBasin-6/trial_T20190907_054459_336922",
+            "repeat_idx": 4,
+            "instruction": "move a cup with spoon in it to the sink"
+        },
+        {
+            "task": "look_at_obj_in_light-WateringCan-None-FloorLamp-212/trial_T20190907_034437_413802",
+            "repeat_idx": 0,
+            "instruction": "Turn on the lamp while holding the teapot."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-DishSponge-None-BathtubBasin-427/trial_T20190906_234735_610018",
+            "repeat_idx": 2,
+            "instruction": "Place a wet sponge inside the bathtub."
+        },
+        {
+            "task": "pick_and_place_simple-Knife-None-SideTable-3/trial_T20190918_184236_557252",
+            "repeat_idx": 0,
+            "instruction": "place a knife on the microwave oven table"
+        },
+        {
+            "task": "pick_two_obj_and_place-Newspaper-None-Drawer-224/trial_T20190911_101248_326533",
+            "repeat_idx": 1,
+            "instruction": "Put two newspapers away in a drawer."
+        },
+        {
+            "task": "pick_two_obj_and_place-KeyChain-None-Sofa-202/trial_T20190908_102840_789300",
+            "repeat_idx": 0,
+            "instruction": "Put two sets of keys on the couch."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Ladle-None-CounterTop-8/trial_T20190909_121908_219603",
+            "repeat_idx": 1,
+            "instruction": "Put a clean ice cream ladle on the counter."
+        }
+    ],
+    "common_sense": [
+        {
+            "task": "pick_clean_then_place_in_recep-Ladle-None-DiningTable-4/trial_T20190909_164840_568811",
+            "repeat_idx": 2,
+            "instruction": "Rinse off something for serving soup and move it to the table."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Spoon-Plate-DiningTable-15/trial_T20190907_112652_334388",
+            "repeat_idx": 1,
+            "instruction": "As you prepare for dinner, arrange an eating surface that will hold your food with a spoon in it on the kitchen table."
+        },
+        {
+            "task": "pick_and_place_simple-HandTowel-None-BathtubBasin-419/trial_T20190908_023400_293044",
+            "repeat_idx": 2,
+            "instruction": "Position a soft absorbent fabric in a tub."
+        },
+        {
+            "task": "pick_and_place_simple-SprayBottle-None-Toilet-422/trial_T20190909_124835_952557",
+            "repeat_idx": 2,
+            "instruction": "Keep a closable liquid container by placing it on the back of the toilet."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-ButterKnife-Cup-SinkBasin-7/trial_T20190908_233333_221307",
+            "repeat_idx": 1,
+            "instruction": "Place a transparent beverage holder with a cutting tool for butter in it to the sink."
+        },
+        {
+            "task": "look_at_obj_in_light-RemoteControl-None-FloorLamp-218/trial_T20190907_164342_432289",
+            "repeat_idx": 2,
+            "instruction": "Pick up a device for changing channels and turn on a lamp."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Spatula-None-DiningTable-4/trial_T20190909_002804_564168",
+            "repeat_idx": 1,
+            "instruction": "During a cooking session, keep a clean flipping tool on a wooden table."
+        },
+        {
+            "task": "look_at_obj_in_light-Pillow-None-FloorLamp-223/trial_T20190906_201007_149137",
+            "repeat_idx": 0,
+            "instruction": "Hold a soft cushion close while turning on the lamp"
+        },
+        {
+            "task": "pick_two_obj_and_place-CD-None-Drawer-304/trial_T20190907_230232_832893",
+            "repeat_idx": 0,
+            "instruction": "After organizing your music collection, relocate two music discs to the bottom drawer of the desk."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Lettuce-None-CounterTop-16/trial_T20190909_051630_092360",
+            "repeat_idx": 1,
+            "instruction": "Rinse off leafy greens and put them down on the countertop."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Watch-Bowl-Shelf-326/trial_T20190909_031836_927615",
+            "repeat_idx": 0,
+            "instruction": "Put a container for rice with a watch in it on the shelf."
+        },
+        {
+            "task": "pick_and_place_simple-Bowl-None-CoffeeTable-201/trial_T20190907_171639_045329",
+            "repeat_idx": 1,
+            "instruction": "Place a round eating vessel on the coffee table."
+        },
+        {
+            "task": "pick_and_place_simple-Newspaper-None-Sofa-224/trial_T20190909_111324_949106",
+            "repeat_idx": 0,
+            "instruction": "Lay out the day's reading material on the couch."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-LettuceSliced-None-CounterTop-19/trial_T20190909_005709_232606",
+            "repeat_idx": 2,
+            "instruction": "Place a clean slice of green leaf on the counter"
+        },
+        {
+            "task": "look_at_obj_in_light-KeyChain-None-FloorLamp-204/trial_T20190909_030908_402835",
+            "repeat_idx": 1,
+            "instruction": "Look at a set of jangling items under a lit tall lamp."
+        },
+        {
+            "task": "pick_two_obj_and_place-Book-None-Desk-302/trial_T20190906_181233_363875",
+            "repeat_idx": 2,
+            "instruction": "Relocate two items containing written information to a piece of furniture for studying in a sleeping area."
+        },
+        {
+            "task": "pick_and_place_simple-Mug-None-SideTable-329/trial_T20190909_032318_169393",
+            "repeat_idx": 1,
+            "instruction": "After enjoying your morning coffee, move the beverage holder to the nightstand"
+        },
+        {
+            "task": "pick_two_obj_and_place-KeyChain-None-Shelf-207/trial_T20190909_131701_482365",
+            "repeat_idx": 2,
+            "instruction": "Put two sets of jangling items carefully on the shelf."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Ladle-None-DiningTable-4/trial_T20190909_164840_568811",
+            "repeat_idx": 0,
+            "instruction": "Get the soup serving tool, wash it, return it to wooden table"
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-AppleSliced-None-DiningTable-27/trial_T20190907_151802_277016",
+            "repeat_idx": 3,
+            "instruction": "Put a clean slice of fruit famously known as Snow White's poisonous temptation on the table."
+        },
+        {
+            "task": "look_at_obj_in_light-RemoteControl-None-FloorLamp-213/trial_T20190907_070857_687585",
+            "repeat_idx": 2,
+            "instruction": "Turn on the lamp while holding the device for changing channels."
+        },
+        {
+            "task": "pick_and_place_simple-Book-None-Sofa-229/trial_T20190907_042856_259139",
+            "repeat_idx": 1,
+            "instruction": "Move the bound collection of narratives to the couch."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Pencil-Bowl-Dresser-311/trial_T20190909_002301_857761",
+            "repeat_idx": 1,
+            "instruction": "Put the round eating vessel with a graphite-writing tool in it on the TV stand."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-TomatoSliced-None-Microwave-20/trial_T20190918_161337_246067",
+            "repeat_idx": 0,
+            "instruction": "Place a slice of rinsed fruit often used in sauces and salads in the microwave."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-ButterKnife-Cup-DiningTable-23/trial_T20190908_233553_192059",
+            "repeat_idx": 1,
+            "instruction": "Position a transparent drinking vessel with a cutting tool for butter in it on the table."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Lettuce-None-Fridge-19/trial_T20190908_100138_446072",
+            "repeat_idx": 1,
+            "instruction": "Place washed leafy green vegetable in a receptacle that can keep it fresh for several days."
+        },
+        {
+            "task": "look_at_obj_in_light-RemoteControl-None-FloorLamp-213/trial_T20190907_070857_687585",
+            "repeat_idx": 1,
+            "instruction": "Activate the source of artificial light while holding the device used for controlling electronics from a distance."
+        },
+        {
+            "task": "pick_two_obj_and_place-Book-None-Desk-313/trial_T20190908_125930_920681",
+            "repeat_idx": 0,
+            "instruction": "Move two books from the place where you sleep to the desk."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-AppleSliced-Pot-Fridge-24/trial_T20190909_064046_163660",
+            "repeat_idx": 5,
+            "instruction": "Put a pan with a red crisp fruit in it in the fridge."
+        },
+        {
+            "task": "pick_and_place_simple-CellPhone-None-Bed-324/trial_T20190907_233817_198528",
+            "repeat_idx": 1,
+            "instruction": "put your communication device on the place where you sleep."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-ButterKnife-Cup-DiningTable-23/trial_T20190908_233553_192059",
+            "repeat_idx": 0,
+            "instruction": "Put a transparent drinking vessel with a butter knife in it on the kitchen island."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Spatula-Pan-CounterTop-17/trial_T20190906_194903_710920",
+            "repeat_idx": 1,
+            "instruction": "Place a cooking container with a flipping tool in it on the kitchen counter."
+        },
+        {
+            "task": "pick_and_place_simple-HandTowel-None-BathtubBasin-408/trial_T20190908_053502_505422",
+            "repeat_idx": 2,
+            "instruction": "Carry something absorbent to the bathtub."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-DishSponge-None-BathtubBasin-427/trial_T20190906_234735_610018",
+            "repeat_idx": 1,
+            "instruction": "Place a cleaned scouring item in a bathtub."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Ladle-None-CounterTop-8/trial_T20190909_121908_219603",
+            "repeat_idx": 0,
+            "instruction": "Place a cleaned soup serving tool on a counter."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Spoon-Cup-SinkBasin-6/trial_T20190907_054459_336922",
+            "repeat_idx": 4,
+            "instruction": "Move a cup with a stirring tool in it to the sink."
+        },
+        {
+            "task": "look_at_obj_in_light-WateringCan-None-FloorLamp-212/trial_T20190907_034437_413802",
+            "repeat_idx": 2,
+            "instruction": "Illuminate the tall standing light fixture while holding the container used for watering plants."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-DishSponge-None-BathtubBasin-427/trial_T20190906_234735_610018",
+            "repeat_idx": 2,
+            "instruction": "Place a wet scouring item inside the bathtub."
+        },
+        {
+            "task": "pick_and_place_simple-Knife-None-SideTable-3/trial_T20190918_184236_557252",
+            "repeat_idx": 0,
+            "instruction": "Place a cutting tool on the microwave oven table"
+        },
+        {
+            "task": "pick_and_place_simple-Book-None-Sofa-229/trial_T20190907_042856_259139",
+            "repeat_idx": 2,
+            "instruction": "Move the book from the table to the large comfortable lounging spot."
+        },
+        {
+            "task": "pick_and_place_simple-Box-None-Dresser-224/trial_T20190907_164104_229696",
+            "repeat_idx": 2,
+            "instruction": "Take the paper container from the couch, and place it on the dresser."
+        },
+        {
+            "task": "pick_two_obj_and_place-Book-None-Desk-313/trial_T20190908_125930_920681",
+            "repeat_idx": 2,
+            "instruction": "Place two bound volumes of knowledge on the desk."
+        },
+        {
+            "task": "pick_and_place_simple-Knife-None-SideTable-3/trial_T20190918_184236_557252",
+            "repeat_idx": 1,
+            "instruction": "Set the bladed utensil on the small table."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Pen-Mug-Dresser-311/trial_T20190909_154212_097094",
+            "repeat_idx": 1,
+            "instruction": "Place a mug with an ink-writing instrument in it on the dresser."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Plate-None-CounterTop-19/trial_T20190908_212725_836398",
+            "repeat_idx": 2,
+            "instruction": "putting a cleaned flat eating surface on a counter."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-SoapBar-None-Toilet-428/trial_T20190907_041436_588106",
+            "repeat_idx": 2,
+            "instruction": "Put a bar of cleaned soap on the back of the porcelain seat in the bathroom."
+        },
+        {
+            "task": "look_at_obj_in_light-WateringCan-None-FloorLamp-212/trial_T20190907_034437_413802",
+            "repeat_idx": 1,
+            "instruction": "The room is dark; can you help me turn something on? At the same time, hold a water can."
+        },
+        {
+            "task": "pick_two_obj_and_place-Spatula-None-Drawer-13/trial_T20190908_183331_203888",
+            "repeat_idx": 1,
+            "instruction": "Put two flipping tools in the drawer."
+        },
+        {
+            "task": "look_at_obj_in_light-KeyChain-None-DeskLamp-327/trial_T20190906_202601_548273",
+            "repeat_idx": 0,
+            "instruction": "Examine the keys under the illumination provided by one fixture on the table."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Watch-Bowl-Shelf-326/trial_T20190909_031836_927615",
+            "repeat_idx": 2,
+            "instruction": "Place a timekeeping device in a round container on the shelf."
+        }
+    ],
+    "complex_instruction": [
+        {
+            "task": "pick_clean_then_place_in_recep-Ladle-None-DiningTable-4/trial_T20190909_164840_568811",
+            "repeat_idx": 2,
+            "instruction": "Although there's a bowl in the cupboard, rinse off a ladle and move it to the table."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Spoon-Plate-DiningTable-15/trial_T20190907_112652_334388",
+            "repeat_idx": 1,
+            "instruction": "After a long day of preparing meals, I'm longing to kick back and enjoy dinner. Could you please set the plate with a spoon in it on the kitchen table? That way, everything will be perfectly in place."
+        },
+        {
+            "task": "pick_two_obj_and_place-ToiletPaper-None-Toilet-408/trial_T20190909_080302_174780",
+            "repeat_idx": 0,
+            "instruction": "While you're tidying up the bathroom, find a spot on the back of the toilet to put two rolls of toilet paper. It's a great place for convenient access when needed."
+        },
+        {
+            "task": "pick_and_place_simple-HandTowel-None-BathtubBasin-419/trial_T20190908_023400_293044",
+            "repeat_idx": 2,
+            "instruction": "As you start to organize the bathroom essentials, could you place a towel in the tub for the next use? It's always handy to have it within reach."
+        },
+        {
+            "task": "pick_and_place_simple-SprayBottle-None-Toilet-422/trial_T20190909_124835_952557",
+            "repeat_idx": 2,
+            "instruction": "Instead of the soap dish, put a bottle on the back of the toilet."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-ButterKnife-Cup-SinkBasin-7/trial_T20190908_233333_221307",
+            "repeat_idx": 1,
+            "instruction": "Although the plate is washed, put a glass with a butter knife in it in a sink."
+        },
+        {
+            "task": "look_at_obj_in_light-RemoteControl-None-FloorLamp-218/trial_T20190907_164342_432289",
+            "repeat_idx": 2,
+            "instruction": "When you're comfortable on the couch, could you pick up the remote and turn on the lamp?"
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Spatula-None-DiningTable-4/trial_T20190909_002804_564168",
+            "repeat_idx": 1,
+            "instruction": "Instead of using the dining table, put a clean spatula on a wooden table."
+        },
+        {
+            "task": "look_at_obj_in_light-Pillow-None-FloorLamp-223/trial_T20190906_201007_149137",
+            "repeat_idx": 0,
+            "instruction": "While attending to bedtime tasks, hold the pillow and then turn on the lamp. It creates just the right amount of light to read or relax."
+        },
+        {
+            "task": "pick_two_obj_and_place-CD-None-Drawer-304/trial_T20190907_230232_832893",
+            "repeat_idx": 0,
+            "instruction": "Could you tidy up the desk by moving two CDs to the bottom drawer of the desk? It helps keep the area looking organized and neat."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Lettuce-None-CounterTop-16/trial_T20190909_051630_092360",
+            "repeat_idx": 1,
+            "instruction": "After purchasing some fresh produce, rinse off the lettuce thoroughly and then place it on the countertop. Preparing a salad later will be a breeze!"
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Watch-Bowl-Shelf-326/trial_T20190909_031836_927615",
+            "repeat_idx": 1,
+            "instruction": "Instead of placing on the table, put a bowl with the watch in it on the shelf."
+        },
+        {
+            "task": "pick_two_obj_and_place-SoapBar-None-Toilet-412/trial_T20190908_071602_531614",
+            "repeat_idx": 0,
+            "instruction": "Would you mind moving two bars of soap to the back of the toilet? It's a clever spot for extra storage and easy access."
+        },
+        {
+            "task": "pick_and_place_simple-Bowl-None-CoffeeTable-201/trial_T20190907_171639_045329",
+            "repeat_idx": 1,
+            "instruction": "On the kitchen island, there's a kettle, but put a bowl on a coffee table."
+        },
+        {
+            "task": "pick_and_place_simple-Newspaper-None-Sofa-224/trial_T20190909_111324_949106",
+            "repeat_idx": 0,
+            "instruction": "As you finish up with reading, could you lay the newspaper on the couch? It's a nice way to keep the lounge area organized."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-LettuceSliced-None-CounterTop-19/trial_T20190909_005709_232606",
+            "repeat_idx": 2,
+            "instruction": "To prepare for tomorrow\u2019s meal, put a clean slice of lettuce on the counter, ready for a fresh start."
+        },
+        {
+            "task": "look_at_obj_in_light-KeyChain-None-FloorLamp-204/trial_T20190909_030908_402835",
+            "repeat_idx": 1,
+            "instruction": "Could you take a moment to look at a set of keys under the light of the tall lamp? It\u2019s best to ensure you\u2019ve got the right set before heading out."
+        },
+        {
+            "task": "pick_two_obj_and_place-Book-None-Desk-302/trial_T20190906_181233_363875",
+            "repeat_idx": 2,
+            "instruction": "Would you gently relocate two books to a bedroom desk? It\u2019s an excellent way to prepare it for good reading experience later on."
+        },
+        {
+            "task": "pick_and_place_simple-Mug-None-SideTable-329/trial_T20190909_032318_169393",
+            "repeat_idx": 1,
+            "instruction": "Kindly move the coffee mug to the nightstand. It's the perfect spot for enjoying a wake-up sip the next morning."
+        },
+        {
+            "task": "pick_and_place_simple-SoapBar-None-Cart-401/trial_T20190907_054906_608944",
+            "repeat_idx": 1,
+            "instruction": "In organizing the bathroom space, transfer the bar of soap from the shelves to the metal rack. Its handy position allows easy access during showers."
+        },
+        {
+            "task": "pick_two_obj_and_place-KeyChain-None-Shelf-207/trial_T20190909_131701_482365",
+            "repeat_idx": 2,
+            "instruction": "For easy access, putting two sets of keys on the shelf helps ensure you always know where to find them before heading out."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Plate-None-CounterTop-19/trial_T20190908_212725_836398",
+            "repeat_idx": 0,
+            "instruction": "When the plate is no longer in use, wash it thoroughly and return it to the counter. Keeping it ready simplifies clean-up."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-AppleSliced-None-DiningTable-27/trial_T20190907_151802_277016",
+            "repeat_idx": 3,
+            "instruction": "Instead of cooking an egg, put a clean apple slice on the table."
+        },
+        {
+            "task": "look_at_obj_in_light-RemoteControl-None-FloorLamp-213/trial_T20190907_070857_687585",
+            "repeat_idx": 2,
+            "instruction": "Could you juggle holding the remote and turning on the lamp at the same time? It's an easy multitask once you get the hang of it!"
+        },
+        {
+            "task": "pick_and_place_simple-Book-None-Sofa-229/trial_T20190907_042856_259139",
+            "repeat_idx": 1,
+            "instruction": "When organizing reading spaces, kindly move the book to the couch. It\u2019s perfect for when the next chapter awaits."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Pencil-Bowl-Dresser-311/trial_T20190909_002301_857761",
+            "repeat_idx": 1,
+            "instruction": "After a bit of tidying up, put the bowl with the pencil on the TV stand. It's always good to keep supplies handy."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-TomatoSliced-None-Microwave-20/trial_T20190918_161337_246067",
+            "repeat_idx": 0,
+            "instruction": "Please place a rinsed slice of tomato in the microwave. It's quick and easy this way, whenever you're ready to use it."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-ButterKnife-Cup-DiningTable-23/trial_T20190908_233553_192059",
+            "repeat_idx": 1,
+            "instruction": "As you set up the dining area, place a glass cup with a butter knife in it on the table. It keeps table settings efficient and ready."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Lettuce-None-Fridge-19/trial_T20190908_100138_446072",
+            "repeat_idx": 1,
+            "instruction": "For freshness, place the washed lettuce in the refrigerator. This way, it's ready for any delightful recipe ideas you have."
+        },
+        {
+            "task": "look_at_obj_in_light-RemoteControl-None-FloorLamp-213/trial_T20190907_070857_687585",
+            "repeat_idx": 1,
+            "instruction": "While lounging in a cozy chair, take a moment to carefully examine a tv remote next to the light of a tall lamp, creating a serene atmosphere conducive to reflection and understanding of its various buttons and functions."
+        },
+        {
+            "task": "pick_two_obj_and_place-Book-None-Desk-302/trial_T20190906_181233_363875",
+            "repeat_idx": 4,
+            "instruction": "Instead of on the sofa, put the books on the desk."
+        },
+        {
+            "task": "pick_two_obj_and_place-Book-None-Desk-313/trial_T20190908_125930_920681",
+            "repeat_idx": 0,
+            "instruction": "When switching study locations, move the two books from the bed to the desk. That way, you'll have everything ready for productive moments."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Watch-Bowl-SideTable-326/trial_T20190907_183137_838565",
+            "repeat_idx": 2,
+            "instruction": "Could you kindly move the bowl with a watch inside from the desk to the table? It helps declutter the workspace and keeps essentials close by."
+        },
+        {
+            "task": "look_at_obj_in_light-KeyChain-None-FloorLamp-204/trial_T20190909_030908_402835",
+            "repeat_idx": 2,
+            "instruction": "Feeling like reading? Picking up keys and turning on the living room lamp creates the perfect ambient lighting for any evening relaxation."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-AppleSliced-Pot-Fridge-24/trial_T20190909_064046_163660",
+            "repeat_idx": 5,
+            "instruction": "Despite the space on the shelf, put a pan with an apple in it in the fridge."
+        },
+        {
+            "task": "pick_and_place_simple-CellPhone-None-Bed-324/trial_T20190907_233817_198528",
+            "repeat_idx": 1,
+            "instruction": "After a long day, placing a phone on the bed ensures it's close enough when you need it next."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Cloth-None-Cabinet-405/trial_T20190907_080903_889497",
+            "repeat_idx": 2,
+            "instruction": "Even though the pantry is open, put a cleaned washcloth away in a cabinet."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-ButterKnife-Cup-DiningTable-23/trial_T20190908_233553_192059",
+            "repeat_idx": 0,
+            "instruction": "As you arrange kitchen items, put a cup with a butter knife in it on the kitchen island. It organizes your space efficiently for future use."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Spatula-Pan-CounterTop-17/trial_T20190906_194903_710920",
+            "repeat_idx": 1,
+            "instruction": "When finished cooking, place the saucepan with a spatula inside on the kitchen counter. It\u2019s nicely poised for swift access when needed."
+        },
+        {
+            "task": "pick_two_obj_and_place-CreditCard-None-Dresser-311/trial_T20190907_201917_045715",
+            "repeat_idx": 0,
+            "instruction": "For a tidy room, put two credit cards on a dresser. It's an excellent way to keep valuable items organized and accessible."
+        },
+        {
+            "task": "pick_and_place_simple-HandTowel-None-BathtubBasin-408/trial_T20190908_053502_505422",
+            "repeat_idx": 2,
+            "instruction": "Despite avoiding water spills, carry a towel to the bathtub."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-DishSponge-None-BathtubBasin-427/trial_T20190906_234735_610018",
+            "repeat_idx": 1,
+            "instruction": "Planning a spa day at home? Place a cleaned sponge in the bathtub. It\u2019s perfect for any relaxing me-time sessions you have in mind."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Ladle-None-CounterTop-8/trial_T20190909_121908_219603",
+            "repeat_idx": 0,
+            "instruction": "Instead of the cutting board, place a clean ladle on a counter."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Spoon-Cup-SinkBasin-6/trial_T20190907_054459_336922",
+            "repeat_idx": 4,
+            "instruction": "When doing kitchen clean-up, move a cup with a spoon in it into the sink. It keeps everything in one place, making washing-up straightforward."
+        },
+        {
+            "task": "look_at_obj_in_light-WateringCan-None-FloorLamp-212/trial_T20190907_034437_413802",
+            "repeat_idx": 0,
+            "instruction": "While maintaining a grip on the watering can with your hand, carefully position yourself near the floor lamp, extending your free hand towards the switch, and gently activate the lamp to illuminate the room, ensuring optimal visibility."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-DishSponge-None-BathtubBasin-427/trial_T20190906_234735_610018",
+            "repeat_idx": 2,
+            "instruction": "In addition to the bath salts, place a wet sponge inside the bathtub."
+        },
+        {
+            "task": "pick_and_place_simple-Knife-None-SideTable-3/trial_T20190918_184236_557252",
+            "repeat_idx": 0,
+            "instruction": "Even with the toaster nearby, place a knife on the microwave oven table."
+        },
+        {
+            "task": "pick_two_obj_and_place-Newspaper-None-Drawer-224/trial_T20190911_101248_326533",
+            "repeat_idx": 1,
+            "instruction": "When tidying the living room, put two newspapers away in a drawer. It clears up space and keeps everything organized for future reading."
+        },
+        {
+            "task": "pick_two_obj_and_place-KeyChain-None-Sofa-202/trial_T20190908_102840_789300",
+            "repeat_idx": 0,
+            "instruction": "As you clear the couch, put two sets of keys on it temporarily. It's a great spot to keep them visible before storing them away."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Ladle-None-CounterTop-8/trial_T20190909_121908_219603",
+            "repeat_idx": 1,
+            "instruction": "After sprucing up the kitchen, place a clean ice cream ladle on the counter. It's all set for those delightful dessert moments."
+        }
+    ],
+    "long_horizon": [
+        {
+            "task": "pick_heat_then_place_in_recep-AppleSliced-None-GarbageCan-11/trial_T20190906_211222_551053",
+            "repeat_idx": 0,
+            "instruction": "Warming up an apple slice and put it in a garbagecan."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-AppleSliced-None-SinkBasin-30/trial_T20190909_001852_804129",
+            "repeat_idx": 0,
+            "instruction": "Put the warm slice apple in the sink"
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-TomatoSliced-None-CounterTop-12/trial_T20190907_102658_284984",
+            "repeat_idx": 2,
+            "instruction": "Put a microwaved tomato slice on the counter."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-BreadSliced-None-Fridge-19/trial_T20190908_070424_700178",
+            "repeat_idx": 1,
+            "instruction": "Put a microwaved slice of bread in the fridge."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-AppleSliced-None-SinkBasin-30/trial_T20190909_001852_804129",
+            "repeat_idx": 1,
+            "instruction": "To heat a piece of apple and place it in the sink."
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-LettuceSliced-None-SinkBasin-15/trial_T20190909_101835_683416",
+            "repeat_idx": 1,
+            "instruction": "Put a cold piece of lettuce in the sink."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-BreadSliced-None-DiningTable-26/trial_T20190908_023536_977733",
+            "repeat_idx": 2,
+            "instruction": "TO heat a bread slice and put in on the table by the spoon."
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-BreadSliced-None-Microwave-11/trial_T20190909_102940_350963",
+            "repeat_idx": 1,
+            "instruction": "To cool a bread slice and place it in the microwave."
+        },
+        {
+            "task": "pick_two_obj_and_place-LettuceSliced-None-Fridge-1/trial_T20190906_181501_970690",
+            "repeat_idx": 0,
+            "instruction": "Put two cabbages in the refrigerator, use the knife to cut the cabbages"
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-AppleSliced-None-DiningTable-17/trial_T20190918_205656_000147",
+            "repeat_idx": 2,
+            "instruction": "Pick up knife, slice apple, put knife in bowl, heat slice of apple in microwave, put apple slice on table."
+        },
+        {
+            "task": "pick_two_obj_and_place-LettuceSliced-None-Fridge-1/trial_T20190906_181501_970690",
+            "repeat_idx": 2,
+            "instruction": "Move a butter knife and two heads of lettuce to the fridge. Slice the two heads of lettuce."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-AppleSliced-None-Fridge-26/trial_T20190907_234650_780308",
+            "repeat_idx": 1,
+            "instruction": "To heat a piece of apple and place it in the fridge."
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-AppleSliced-None-SideTable-21/trial_T20190907_013001_399963",
+            "repeat_idx": 1,
+            "instruction": "Put a cooled piece of an apple on a stand."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-AppleSliced-None-Fridge-18/trial_T20190911_045200_839773",
+            "repeat_idx": 0,
+            "instruction": "Cooking a sliced apple in the microwave. Then put it to the fridge."
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-AppleSliced-None-GarbageCan-25/trial_T20190908_193525_796595",
+            "repeat_idx": 0,
+            "instruction": "Place a chilled apple section into the bin."
+        },
+        {
+            "task": "pick_two_obj_and_place-LettuceSliced-None-Fridge-1/trial_T20190906_181501_970690",
+            "repeat_idx": 5,
+            "instruction": "Put both lettuce in the fridge, slice both lettuce."
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-TomatoSliced-None-Microwave-12/trial_T20190908_165525_911839",
+            "repeat_idx": 2,
+            "instruction": "Place a cooled tomato slice in the microwave."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-AppleSliced-None-DiningTable-17/trial_T20190918_205656_000147",
+            "repeat_idx": 1,
+            "instruction": "Place a heated apple slice on the large table"
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-AppleSliced-None-GarbageCan-25/trial_T20190908_193525_796595",
+            "repeat_idx": 2,
+            "instruction": "Throw out a chilled piece of apple in a garbagecan."
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-TomatoSliced-None-Microwave-12/trial_T20190908_165525_911839",
+            "repeat_idx": 1,
+            "instruction": "Put the chilled sliced tomato in the microwave"
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-AppleSliced-None-Fridge-18/trial_T20190911_045200_839773",
+            "repeat_idx": 3,
+            "instruction": "Place a heated slice of apple in the fridge."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-AppleSliced-None-CounterTop-14/trial_T20190907_232225_725376",
+            "repeat_idx": 0,
+            "instruction": "Place a cooked slice of apple to the right of the yellow knife on the counter."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-BreadSliced-None-Fridge-19/trial_T20190908_070424_700178",
+            "repeat_idx": 2,
+            "instruction": "Put a slice of heated bread in the fridge."
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-AppleSliced-None-DiningTable-18/trial_T20190909_022535_813547",
+            "repeat_idx": 0,
+            "instruction": "Place a cold apple slice on the table."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-TomatoSliced-None-CounterTop-12/trial_T20190907_102658_284984",
+            "repeat_idx": 0,
+            "instruction": "Put a cooked slice of tomato on a kitchen counter."
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-PotatoSliced-None-Microwave-18/trial_T20190908_041830_078220",
+            "repeat_idx": 2,
+            "instruction": "Slice the potato, put slice in fridge, put it in the microwave"
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-LettuceSliced-None-SinkBasin-2/trial_T20190908_015957_501112",
+            "repeat_idx": 1,
+            "instruction": "Cut a slice of lettuce, chill it and put it in the sink."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-BreadSliced-None-Fridge-19/trial_T20190908_070424_700178",
+            "repeat_idx": 0,
+            "instruction": "Slice the bread, cook a slice in the microwave, put it in the fridge"
+        },
+        {
+            "task": "pick_two_obj_and_place-LettuceSliced-None-Fridge-1/trial_T20190906_181501_970690",
+            "repeat_idx": 4,
+            "instruction": "Put both lettuce in the fridge, slice both lettuce"
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-AppleSliced-None-SinkBasin-30/trial_T20190909_001852_804129",
+            "repeat_idx": 2,
+            "instruction": "Put a knife and microwaved apple slice in the sink."
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-TomatoSliced-None-SinkBasin-4/trial_T20190907_071506_149865",
+            "repeat_idx": 1,
+            "instruction": "Put a cold slice of tomato on top of a sponge in the sink."
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-PotatoSliced-None-SinkBasin-13/trial_T20190907_073447_193556",
+            "repeat_idx": 2,
+            "instruction": "Put a cold slice of potato in a sink. "
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-AppleSliced-None-Fridge-18/trial_T20190911_045200_839773",
+            "repeat_idx": 2,
+            "instruction": "Put a heated chunk of apple in the fridge."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-PotatoSliced-None-GarbageCan-15/trial_T20190908_042418_987263",
+            "repeat_idx": 0,
+            "instruction": "Slice a heated potato with a knife and throw it into a garbagecan."
+        },
+        {
+            "task": "pick_two_obj_and_place-LettuceSliced-None-Fridge-1/trial_T20190906_181501_970690",
+            "repeat_idx": 1,
+            "instruction": "Place two heads of lettuce into a refrigerator, retrieving a  knife to slice them."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-AppleSliced-None-Fridge-18/trial_T20190911_045200_839773",
+            "repeat_idx": 4,
+            "instruction": "Put a warm apple slice in the refrigerator. "
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-PotatoSliced-None-GarbageCan-15/trial_T20190908_042418_987263",
+            "repeat_idx": 2,
+            "instruction": "Throw out a microwaved slice of potato into the garbagecan."
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-LettuceSliced-None-SinkBasin-2/trial_T20190908_015957_501112",
+            "repeat_idx": 2,
+            "instruction": "Put cold lettuce in the sink."
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-PotatoSliced-None-Microwave-18/trial_T20190908_041830_078220",
+            "repeat_idx": 0,
+            "instruction": "place a cold potato slice in the oven"
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-AppleSliced-None-Fridge-18/trial_T20190911_045200_839773",
+            "repeat_idx": 1,
+            "instruction": "Place a cooked apple slice into a fridge."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-TomatoSliced-None-GarbageCan-16/trial_T20190909_004537_873323",
+            "repeat_idx": 1,
+            "instruction": "Place a cooked tomato slice into the bin."
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-AppleSliced-None-SideTable-21/trial_T20190907_013001_399963",
+            "repeat_idx": 0,
+            "instruction": "place a cooled sliced apple down on the black table at the end of the kitchen counter"
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-TomatoSliced-None-CounterTop-2/trial_T20190910_180358_375701",
+            "repeat_idx": 1,
+            "instruction": "Set a heated tomato slice on the island."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-BreadSliced-None-DiningTable-26/trial_T20190908_023536_977733",
+            "repeat_idx": 0,
+            "instruction": "place a hot bread slice on the table"
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-TomatoSliced-None-SinkBasin-15/trial_T20190909_044151_889150",
+            "repeat_idx": 2,
+            "instruction": "slice a tomato, heat it up in the microwave, and place it in the sink"
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-TomatoSliced-None-CounterTop-2/trial_T20190910_180358_375701",
+            "repeat_idx": 0,
+            "instruction": "Put the cooked tomato slice on the kitchen island"
+        },
+        {
+            "task": "pick_cool_then_place_in_recep-AppleSliced-None-GarbageCan-25/trial_T20190908_193525_796595",
+            "repeat_idx": 1,
+            "instruction": "Put the chilled slice apple in the trash bin"
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-TomatoSliced-None-GarbageCan-16/trial_T20190909_004537_873323",
+            "repeat_idx": 0,
+            "instruction": "to cook a sliced tomato to throw it in the trash."
+        },
+        {
+            "task": "pick_heat_then_place_in_recep-TomatoSliced-None-CounterTop-12/trial_T20190907_102658_284984",
+            "repeat_idx": 1,
+            "instruction": "Put a heated tomato slice on the counter near the coffee maker."
+        },
+        {
+            "task": "pick_two_obj_and_place-LettuceSliced-None-Fridge-1/trial_T20190906_181501_970690",
+            "repeat_idx": 3,
+            "instruction": "Put two heads of lettuce into the fridge and use a knife to slice them."
+        }
+    ],
+    "spatial": [
+        {
+            "task": "pick_clean_then_place_in_recep-Ladle-None-DiningTable-27/trial_T20190911_131350_027076",
+            "repeat_idx": 2,
+            "instruction": "wash the ladle and put it back on the table"
+        },
+        {
+            "task": "pick_two_obj_and_place-SprayBottle-None-Toilet-429/trial_T20190907_033843_707544",
+            "repeat_idx": 0,
+            "instruction": "Place spray bottles on the back of a toilet"
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Mug-None-CoffeeMachine-26/trial_T20190907_233056_022802",
+            "repeat_idx": 0,
+            "instruction": "Put a clean mug under the coffee maker."
+        },
+        {
+            "task": "pick_and_place_simple-SoapBar-None-Drawer-409/trial_T20190909_100455_031300",
+            "repeat_idx": 2,
+            "instruction": "Place soap inside the drawer to the right of the sink."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Pen-Mug-Desk-309/trial_T20190909_023218_500741",
+            "repeat_idx": 1,
+            "instruction": "place a cup with a pen in it on top of the cabinet"
+        },
+        {
+            "task": "pick_and_place_simple-SprayBottle-None-Cabinet-413/trial_T20190907_114903_411834",
+            "repeat_idx": 0,
+            "instruction": "Put a spray bottle into a cabinet under the sink."
+        },
+        {
+            "task": "pick_and_place_simple-SprayBottle-None-Cabinet-413/trial_T20190907_114903_411834",
+            "repeat_idx": 1,
+            "instruction": "place a spray bottle in the bottom left bathroom cabinet"
+        },
+        {
+            "task": "pick_and_place_simple-SprayBottle-None-Toilet-422/trial_T20190909_124835_952557",
+            "repeat_idx": 0,
+            "instruction": "put a spray bottle on top of the water tank"
+        },
+        {
+            "task": "pick_two_obj_and_place-SoapBar-None-Toilet-417/trial_T20190908_191330_157502",
+            "repeat_idx": 1,
+            "instruction": "Organize the bars of soap on top of the toilet tank."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-AppleSliced-Pan-CounterTop-8/trial_T20190909_002950_338362",
+            "repeat_idx": 2,
+            "instruction": "To place an apple in a pan on the back of the counter as well as cut it into three slices."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Spatula-Pan-CounterTop-17/trial_T20190906_194903_710920",
+            "repeat_idx": 2,
+            "instruction": "Plan a pan with a spatula in it down on the counter to the right of the toaster."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Knife-Mug-DiningTable-27/trial_T20190913_113749_095745",
+            "repeat_idx": 0,
+            "instruction": "Put a mug with a knife in it on the table to the left of the sink."
+        },
+        {
+            "task": "look_at_obj_in_light-KeyChain-None-DeskLamp-327/trial_T20190906_202601_548273",
+            "repeat_idx": 1,
+            "instruction": "Inspect keys near a lit lamp."
+        },
+        {
+            "task": "pick_two_obj_and_place-SprayBottle-None-Cabinet-407/trial_T20190907_144556_144188",
+            "repeat_idx": 0,
+            "instruction": "Move the spray bottles to the cabinet under the sink. "
+        },
+        {
+            "task": "pick_two_obj_and_place-SprayBottle-None-Cabinet-407/trial_T20190907_144556_144188",
+            "repeat_idx": 1,
+            "instruction": "Put two bottles in a cabinet under the sink."
+        },
+        {
+            "task": "pick_two_obj_and_place-SprayBottle-None-Cabinet-407/trial_T20190907_144556_144188",
+            "repeat_idx": 3,
+            "instruction": "Put two spray bottles in the cabinet under the sink against the wall."
+        },
+        {
+            "task": "pick_two_obj_and_place-SprayBottle-None-Cabinet-407/trial_T20190907_144556_144188",
+            "repeat_idx": 5,
+            "instruction": "To move two spray bottles to the cabinet below the sink on the right side. "
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Lettuce-None-CounterTop-16/trial_T20190909_051630_092360",
+            "repeat_idx": 0,
+            "instruction": "Retrieve green vegetable from table, wash it in the sink, put it on the right side counter"
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Lettuce-None-CounterTop-16/trial_T20190909_051630_092360",
+            "repeat_idx": 2,
+            "instruction": "Put cleaned lettuce on the counter, right of the sink. "
+        },
+        {
+            "task": "look_at_obj_in_light-BaseballBat-None-DeskLamp-303/trial_T20190907_060414_846460",
+            "repeat_idx": 1,
+            "instruction": "Examine the baseball bat next to the light of the lamp on the desk."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-SoapBar-None-Cabinet-402/trial_T20190908_055221_984342",
+            "repeat_idx": 0,
+            "instruction": "Put a clean bar of soap under the sink. "
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-SoapBar-None-Cabinet-402/trial_T20190908_055221_984342",
+            "repeat_idx": 2,
+            "instruction": "drop a wet soap in the cupboard under the sink"
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Fork-Cup-DiningTable-23/trial_T20190906_205421_980666",
+            "repeat_idx": 0,
+            "instruction": "Place a glass with a fork in it on the table in front of a glass pitcher."
+        },
+        {
+            "task": "pick_two_obj_and_place-ToiletPaper-None-Drawer-423/trial_T20190907_111251_461099",
+            "repeat_idx": 0,
+            "instruction": "To take the toilet paper on top of the toilet and place it in a drawer. "
+        },
+        {
+            "task": "pick_two_obj_and_place-ToiletPaper-None-Drawer-423/trial_T20190907_111251_461099",
+            "repeat_idx": 1,
+            "instruction": "Put two rolls of toilet paper in a drawer under the sink."
+        },
+        {
+            "task": "pick_two_obj_and_place-ToiletPaper-None-Drawer-423/trial_T20190907_111251_461099",
+            "repeat_idx": 2,
+            "instruction": "Put two rolls of toilet paper into a drawer underneath the sink."
+        },
+        {
+            "task": "pick_and_place_simple-Cloth-None-BathtubBasin-405/trial_T20190906_162502_940304",
+            "repeat_idx": 5,
+            "instruction": "Move the rag from the bottom left cupboard to the bath tub."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-SoapBar-None-Toilet-428/trial_T20190907_041436_588106",
+            "repeat_idx": 0,
+            "instruction": "Place the wet soap on top of the toilet next to the other soaps."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-SoapBar-None-Toilet-428/trial_T20190907_041436_588106",
+            "repeat_idx": 1,
+            "instruction": "Move a rinsed off bar of soap from the sink to the back of the toilet. "
+        },
+        {
+            "task": "pick_two_obj_and_place-Knife-None-Drawer-18/trial_T20190907_065232_689984",
+            "repeat_idx": 2,
+            "instruction": "Put two knives from the dining table in the drawer to the left of the stove."
+        },
+        {
+            "task": "pick_and_place_simple-Candle-None-Toilet-429/trial_T20190908_052232_887934",
+            "repeat_idx": 0,
+            "instruction": "Put a candle on the back of a toilet."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-SoapBar-None-Drawer-423/trial_T20190906_202340_749336",
+            "repeat_idx": 1,
+            "instruction": "Put wet soap in the cabinet under the sink to the left. "
+        },
+        {
+            "task": "pick_and_place_simple-Book-None-SideTable-329/trial_T20190908_050633_745514",
+            "repeat_idx": 1,
+            "instruction": "Place book on right bedside table"
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Plate-None-CounterTop-19/trial_T20190908_212725_836398",
+            "repeat_idx": 1,
+            "instruction": "place a clean plate down on the kitchen counter to the right of the sink"
+        },
+        {
+            "task": "pick_two_obj_and_place-RemoteControl-None-Ottoman-203/trial_T20190906_182952_858723",
+            "repeat_idx": 1,
+            "instruction": "Place two controllers on the bench in front of the couch."
+        },
+        {
+            "task": "pick_and_place_simple-SoapBottle-None-Cabinet-414/trial_T20190908_110131_524518",
+            "repeat_idx": 1,
+            "instruction": "Place the lotion on the cabinet underneath the sink."
+        },
+        {
+            "task": "pick_and_place_simple-SoapBottle-None-Cabinet-414/trial_T20190908_110131_524518",
+            "repeat_idx": 2,
+            "instruction": "Put the bottle of lotion underneath the sink."
+        },
+        {
+            "task": "pick_and_place_simple-Plunger-None-Cabinet-414/trial_T20190909_031040_889814",
+            "repeat_idx": 2,
+            "instruction": "Put the plunger under the sink. "
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-SoapBar-None-Toilet-410/trial_T20190906_201106_979461",
+            "repeat_idx": 1,
+            "instruction": "Put a clean bar of soap on top of a toilet's tank."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-RemoteControl-Box-ArmChair-214/trial_T20190907_120634_187855",
+            "repeat_idx": 1,
+            "instruction": "Box a remote control, move it at the chair near the door."
+        },
+        {
+            "task": "pick_two_obj_and_place-SprayBottle-None-GarbageCan-419/trial_T20190908_164236_518264",
+            "repeat_idx": 1,
+            "instruction": "To move two spray bottles to the bin next to the toilet. "
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-DishSponge-None-CounterTop-403/trial_T20190908_144357_621068",
+            "repeat_idx": 1,
+            "instruction": "place a clean sponge on top of the sink counter"
+        },
+        {
+            "task": "look_at_obj_in_light-Statue-None-DeskLamp-216/trial_T20190909_193045_208933",
+            "repeat_idx": 2,
+            "instruction": "To pick up the statue and turn on the lamp next to the couch."
+        },
+        {
+            "task": "pick_and_place_simple-SprayBottle-None-Cabinet-413/trial_T20190907_114931_692464",
+            "repeat_idx": 1,
+            "instruction": "Move the cleaner from the toilet to the cabinet under the sinks"
+        },
+        {
+            "task": "pick_and_place_simple-SprayBottle-None-Cabinet-413/trial_T20190907_114931_692464",
+            "repeat_idx": 2,
+            "instruction": "Put the green bottle in the cabinet under the sink"
+        },
+        {
+            "task": "pick_and_place_simple-Mug-None-Dresser-311/trial_T20190909_152837_739016",
+            "repeat_idx": 2,
+            "instruction": "Put a mug on the table in front of a television."
+        },
+        {
+            "task": "pick_and_place_simple-Newspaper-None-Sofa-224/trial_T20190909_111324_949106",
+            "repeat_idx": 1,
+            "instruction": "Place the newspaper next to the left laptop."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Ladle-Plate-Cabinet-16/trial_T20190907_070152_814652",
+            "repeat_idx": 1,
+            "instruction": "Place the plate with ladle inside it from the table into the cabinet above the coffee maker."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Ladle-Plate-Cabinet-16/trial_T20190907_070152_814652",
+            "repeat_idx": 3,
+            "instruction": "Take the plate with a spoon inside it from the table to the cabinet on the right of the fridge."
+        },
+        {
+            "task": "pick_and_place_simple-SprayBottle-None-Toilet-415/trial_T20190909_075955_678702",
+            "repeat_idx": 1,
+            "instruction": "knock an empty toilet paper roll off of the back of the toilet while placing a spray bottle next to it"
+        }
+    ],
+    "visual_appearance": [
+        {
+            "task": "pick_two_obj_and_place-SprayBottle-None-Toilet-429/trial_T20190907_033843_707544",
+            "repeat_idx": 3,
+            "instruction": "Place two yellow bottles on top of a toilet"
+        },
+        {
+            "task": "pick_two_obj_and_place-SprayBottle-None-Toilet-429/trial_T20190907_033843_707544",
+            "repeat_idx": 4,
+            "instruction": "Put two yellow bottles on top of the toilet"
+        },
+        {
+            "task": "pick_two_obj_and_place-SoapBottle-None-Drawer-415/trial_T20190907_161729_798002",
+            "repeat_idx": 1,
+            "instruction": "get two silver bottles with brown pumps, put them in dresser drawer"
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Spatula-Bowl-SideTable-28/trial_T20190906_195919_700947",
+            "repeat_idx": 0,
+            "instruction": "Put away spatula in the bowl to a black table"
+        },
+        {
+            "task": "pick_two_obj_and_place-SprayBottle-None-Toilet-402/trial_T20190910_222914_814642",
+            "repeat_idx": 0,
+            "instruction": "Put the green spray bottles on the toilet"
+        },
+        {
+            "task": "look_at_obj_in_light-CreditCard-None-FloorLamp-207/trial_T20190907_031918_448619",
+            "repeat_idx": 2,
+            "instruction": "Turn on a green lamp with a credit card."
+        },
+        {
+            "task": "look_at_obj_in_light-Vase-None-DeskLamp-303/trial_T20190907_150418_457594",
+            "repeat_idx": 0,
+            "instruction": "Turn on the desk lamp while holding a yellow vessel"
+        },
+        {
+            "task": "look_at_obj_in_light-Vase-None-DeskLamp-303/trial_T20190907_150418_457594",
+            "repeat_idx": 1,
+            "instruction": "grab the yellow stand on the table, turn on the lamp"
+        },
+        {
+            "task": "look_at_obj_in_light-Vase-None-DeskLamp-303/trial_T20190907_150418_457594",
+            "repeat_idx": 3,
+            "instruction": "To pick up a yellow object, as well as turn on a lamp."
+        },
+        {
+            "task": "pick_two_obj_and_place-TissueBox-None-Toilet-426/trial_T20190909_044602_338962",
+            "repeat_idx": 0,
+            "instruction": "Move two tissue boxes from the green cabinet counter top to the toilet"
+        },
+        {
+            "task": "look_at_obj_in_light-Bowl-None-DeskLamp-316/trial_T20190908_230702_962704",
+            "repeat_idx": 2,
+            "instruction": "Pick up a brown bowl to look at under a lit lamp."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Knife-Bowl-SideTable-28/trial_T20190907_074712_870488",
+            "repeat_idx": 1,
+            "instruction": "Put a knife in a blue container onto the black table in the corner."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Pen-Mug-Desk-309/trial_T20190909_023218_500741",
+            "repeat_idx": 2,
+            "instruction": "Put a mug with a pen in it on a white dresser."
+        },
+        {
+            "task": "pick_and_place_simple-SprayBottle-None-Cabinet-413/trial_T20190907_114903_411834",
+            "repeat_idx": 2,
+            "instruction": "get spray from white drawer to a cabinet."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-DishSponge-Pot-SinkBasin-1/trial_T20190908_103955_680867",
+            "repeat_idx": 1,
+            "instruction": "Move the pot with the green sponge inside from the refrigerator to the sink."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Pencil-Bowl-Dresser-311/trial_T20190909_002301_857761",
+            "repeat_idx": 2,
+            "instruction": "Place the glass bowl with the pencil inside of it on the white dresser."
+        },
+        {
+            "task": "pick_two_obj_and_place-Vase-None-Desk-204/trial_T20190906_181531_703961",
+            "repeat_idx": 0,
+            "instruction": "Put the yellow and blue jars on the black desk."
+        },
+        {
+            "task": "pick_two_obj_and_place-Vase-None-Desk-204/trial_T20190906_181531_703961",
+            "repeat_idx": 1,
+            "instruction": "Put all the vases on the black desk."
+        },
+        {
+            "task": "pick_two_obj_and_place-Vase-None-Desk-204/trial_T20190906_181531_703961",
+            "repeat_idx": 2,
+            "instruction": "Place the yellow and blue vase on the table."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-RemoteControl-Box-Shelf-214/trial_T20190907_160619_888539",
+            "repeat_idx": 1,
+            "instruction": "Place the remote in the box on the brown shelf."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Fork-Mug-DiningTable-18/trial_T20190906_235214_456832",
+            "repeat_idx": 1,
+            "instruction": "Put the mug with fork inside it on the round table. "
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Fork-Mug-DiningTable-18/trial_T20190906_235214_456832",
+            "repeat_idx": 2,
+            "instruction": "Place a mug with a fork in it onto the round kitchen table."
+        },
+        {
+            "task": "look_at_obj_in_light-Pillow-None-FloorLamp-223/trial_T20190906_201007_149137",
+            "repeat_idx": 2,
+            "instruction": "Turn on the tall lamp in the corner while carrying a white cushion."
+        },
+        {
+            "task": "pick_and_place_simple-Cloth-None-BathtubBasin-405/trial_T20190906_162502_940304",
+            "repeat_idx": 0,
+            "instruction": "move the red cloth from the cabinet to the tub"
+        },
+        {
+            "task": "pick_and_place_simple-Cloth-None-BathtubBasin-405/trial_T20190906_162502_940304",
+            "repeat_idx": 4,
+            "instruction": "Put the red rag into the bathtub"
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-TomatoSliced-Pan-DiningTable-28/trial_T20190908_133804_285739",
+            "repeat_idx": 2,
+            "instruction": "Move a pan beneath a tomato slice on the black table."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-PotatoSliced-Pot-DiningTable-28/trial_T20190910_001038_953470",
+            "repeat_idx": 2,
+            "instruction": "Put a pot containing a knife and a potato slice on the black table"
+        },
+        {
+            "task": "pick_two_obj_and_place-Knife-None-Drawer-18/trial_T20190907_065232_689984",
+            "repeat_idx": 1,
+            "instruction": "Put 2 yellow knives from the round black table to the drawer of the cabinet with a toaster. "
+        },
+        {
+            "task": "pick_two_obj_and_place-Knife-None-Drawer-18/trial_T20190907_065232_689984",
+            "repeat_idx": 4,
+            "instruction": "Putting away yellow handled knives in the drawer"
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Ladle-None-DiningTable-16/trial_T20190909_183724_205399",
+            "repeat_idx": 0,
+            "instruction": "Put a clean large metal spoon on the round white table."
+        },
+        {
+            "task": "pick_and_place_simple-Pencil-None-Desk-310/trial_T20190909_113054_894334",
+            "repeat_idx": 2,
+            "instruction": "Move a pencil from a small black bin to a wooden desk."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-AppleSliced-Pot-Fridge-24/trial_T20190909_064046_163660",
+            "repeat_idx": 4,
+            "instruction": "Place an apple slice in a square pan, place both in fridge"
+        },
+        {
+            "task": "look_at_obj_in_light-Pillow-None-DeskLamp-302/trial_T20190909_150916_682139",
+            "repeat_idx": 0,
+            "instruction": "Carry a purple pillow while turning on a lamp"
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-ButterKnife-None-DiningTable-16/trial_T20190909_114508_617301",
+            "repeat_idx": 1,
+            "instruction": "Put a clean butter knife on a round white table."
+        },
+        {
+            "task": "pick_two_obj_and_place-Pan-None-CounterTop-14/trial_T20190907_012519_974044",
+            "repeat_idx": 2,
+            "instruction": "Move both pans from the stove top to the white counter top."
+        },
+        {
+            "task": "pick_clean_then_place_in_recep-Cloth-None-Cabinet-405/trial_T20190907_080903_889497",
+            "repeat_idx": 1,
+            "instruction": "To wash the red cloth and put it to a cabinet."
+        },
+        {
+            "task": "pick_and_place_simple-Mug-None-SideTable-329/trial_T20190909_032340_274147",
+            "repeat_idx": 1,
+            "instruction": "Move a black mug from the desk to the nightstand."
+        },
+        {
+            "task": "look_at_obj_in_light-CreditCard-None-FloorLamp-206/trial_T20190908_083541_210340",
+            "repeat_idx": 1,
+            "instruction": "Take the blue bank card from behind the TV, turn on the lamp in the corner"
+        },
+        {
+            "task": "look_at_obj_in_light-WateringCan-None-FloorLamp-212/trial_T20190907_034437_413802",
+            "repeat_idx": 2,
+            "instruction": "Turn a light on while holding a white object."
+        },
+        {
+            "task": "look_at_obj_in_light-TennisRacket-None-DeskLamp-324/trial_T20190907_065522_867032",
+            "repeat_idx": 0,
+            "instruction": "Turn the green lamp on while carrying a tennis racquet."
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-ButterKnife-Cup-SinkBasin-7/trial_T20190908_233333_221307",
+            "repeat_idx": 0,
+            "instruction": "To move a yellow cup to the sink and put a butter knife in the yellow cup. "
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-PotatoSliced-Pot-DiningTable-21/trial_T20190907_113142_479158",
+            "repeat_idx": 3,
+            "instruction": "Put a metal pot with a potato slice in it on a white table."
+        },
+        {
+            "task": "pick_two_obj_and_place-CreditCard-None-Safe-323/trial_T20190907_001129_214240",
+            "repeat_idx": 1,
+            "instruction": "Place two credit cards inside a small white safe."
+        },
+        {
+            "task": "look_at_obj_in_light-Cloth-None-DeskLamp-303/trial_T20190908_170503_844252",
+            "repeat_idx": 2,
+            "instruction": "Examine a blue cloth by the light of a desk lamp."
+        },
+        {
+            "task": "pick_two_obj_and_place-SprayBottle-None-GarbageCan-419/trial_T20190908_164236_518264",
+            "repeat_idx": 2,
+            "instruction": "Put two blue spray bottles in the trash can."
+        },
+        {
+            "task": "pick_and_place_simple-SprayBottle-None-Cabinet-413/trial_T20190907_114931_692464",
+            "repeat_idx": 0,
+            "instruction": "put the green spray bottle into the cabinet."
+        },
+        {
+            "task": "pick_and_place_simple-CellPhone-None-Bed-324/trial_T20190907_233817_198528",
+            "repeat_idx": 0,
+            "instruction": "Take the blue cell phone from the dresser, put it on the bed"
+        },
+        {
+            "task": "pick_and_place_with_movable_recep-Spoon-Plate-DiningTable-15/trial_T20190907_112652_334388",
+            "repeat_idx": 0,
+            "instruction": "place a black plate with a spoon in it on top of the kitchen table"
+        },
+        {
+            "task": "pick_and_place_simple-Newspaper-None-Sofa-224/trial_T20190909_111324_949106",
+            "repeat_idx": 2,
+            "instruction": "Move a newspaper from a dresser to a black couch."
+        },
+        {
+            "task": "pick_two_obj_and_place-SoapBar-None-GarbageCan-418/trial_T20190909_055538_380023",
+            "repeat_idx": 0,
+            "instruction": "To move two bars of soap to the black bin. "
+        }
+    ]
+}
