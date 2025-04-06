@@ -128,7 +128,7 @@ Each run takes ~4 hours to reach 150 steps on 4 H100s. You can decrease testing 
 ### Navigation
 ```bash
 # Additional dependencies:
-pip install ai2thor
+pip install ai2thor==5.0.0
 pip install numpy==1.25.1
 
 # For headless servers, additional setup is required:
