@@ -11,11 +11,7 @@
 # - The environment must implement get_env_state() method that returns a text-based 
 #   description of the current environment state
 # - This state description is used as ground truth for calculating process rewards
-from typing import List, Dict, Any
-import asyncio
-import time
-from .llm_judge import run_llm_judge
-
+from .llm_judge import llm_judge
 def env_state_reward_wrapper(step_func):
     """
     Decorator function that enhances the step method to include state rewards.
@@ -65,7 +61,7 @@ def service_state_reward_wrapper(step_batch_func):
     def wrapped_step_batch(self, ids2actions):
         # Call the original step_batch function
         step_batch_results = step_batch_func(self, ids2actions)
-        input_to_llm = []
+        input_to_llm=[]
         for id, result in step_batch_results.items():
             obs, reward, done, info = result
             if info.get("use_state_reward", False):
@@ -74,40 +70,40 @@ def service_state_reward_wrapper(step_batch_func):
                         "id": id,
                         "content": info["observation_content"],
                         "state": info["observation_state"],
-                        "type": "observation",
-                        "env_name": self.env_configs[id]
+                        "type": "observation"
                     })
                 if info.get("prediction_content", None) and info.get("prediction_state", None):
                     input_to_llm.append({
                         "id": id,
                         "content": info["prediction_content"],
                         "state": info["prediction_state"],
-                        "type": "prediction",
-                        "env_name": self.env_configs[id]
+                        "type": "prediction"
                     })
                     
         if len(input_to_llm) > 0:
-            # Use synchronous batch processing
-            scores = run_llm_judge(input_to_llm)
+            # Call the LLM judge to get scores
+            scores = llm_judge(input_to_llm)
         else:
             return step_batch_results
         
-        new_step_batch_results = {id: list(result) for id, result in step_batch_results.items()}
+        new_step_batch_results = {id:list(result) for id, result in step_batch_results.items()}
         
-        for item, score in zip(input_to_llm, scores):
+        
+        for item,score in zip(input_to_llm, scores):
             id = item["id"]
-            env_config = self.env_configs[id]
+            env_config=self.env_configs[id]
             if "metrics" not in new_step_batch_results[id][3]:
                 new_step_batch_results[id][3]["metrics"] = {"turn_metrics": {}, "traj_metrics": {}}
             if "turn_metrics" not in new_step_batch_results[id][3]["metrics"]:
                 new_step_batch_results[id][3]["metrics"]["turn_metrics"] = {}
             if item["type"] == "observation":
-                new_step_batch_results[id][3]["metrics"]["turn_metrics"]["grounding_reward"] = score * env_config.get("grounding_reward_weight", 0.5)
-                new_step_batch_results[id][1] += score * env_config.get("grounding_reward_weight", 0.5)
+                new_step_batch_results[id][3]["metrics"]["turn_metrics"]["grounding_reward"] = score*env_config.get("grounding_reward_weight", 0.5)
+                new_step_batch_results[id][1]+= score*env_config.get("grounding_reward_weight", 0.5)
             elif item["type"] == "prediction":
-                new_step_batch_results[id][3]["metrics"]["turn_metrics"]["worldmodeling_reward"] = score * env_config.get("worldmodeling_reward_weight", 0.5)
-                new_step_batch_results[id][1] += score * env_config.get("worldmodeling_reward_weight", 0.5)
+                new_step_batch_results[id][3]["metrics"]["turn_metrics"]["worldmodeling_reward"] = score*env_config.get("worldmodeling_reward_weight", 0.5)
+                new_step_batch_results[id][1]+= score*env_config.get("worldmodeling_reward_weight", 0.5)
         
         return {id: tuple(result) for id, result in new_step_batch_results.items()}
                 
     return wrapped_step_batch
+
