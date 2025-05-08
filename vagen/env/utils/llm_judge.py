@@ -16,7 +16,7 @@ CONFIG_PATH = "./"
 PROMPT_TEMPLATE = """
 Compare the natural language description with the state information dictionary.
 Answer YES if the description accurately matches the state, or NO if it doesn't.
-Your answer should be in <answer>YES</answer> or <answer>NO</answer> format.
+Think step by step and end with your answer in <answer>YES</answer> or <answer>NO</answer> format.
 
 State Information:
 {state_information_dict}
@@ -25,7 +25,6 @@ Description:
 "{natural_language_description}"
 
 Your answer should be within {max_tokens} tokens and MUST end with <answer>YES</answer> or <answer>NO</answer>.
-Directly output your answer.
 """
 
 def load_config() -> DictConfig:
@@ -94,8 +93,6 @@ async def llm_judge(
                     max_tokens=max_tokens
                 )
                 
-                print(response.choices[0].message.content)
-                
                 response_text = response.choices[0].message.content
                 answer = extract_answer(response_text)
                 
@@ -146,6 +143,7 @@ if __name__ == "__main__":
         FrozenLakeEnvConfig(size=5, is_slippery=True)
     ]
     environments = [FrozenLakeEnv(config) for config in base_configs]
+    
     # Setup evaluation inputs
     inputs = []
     for i, env in enumerate(environments):

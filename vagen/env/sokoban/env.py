@@ -14,7 +14,7 @@ from .prompt import (
     format_prompt
 )
 from .env_config import SokobanEnvConfig
-from vagen.env.utils.state_reward_utils import env_state_reward_wrapper
+from vagen.env.utils.state_reward_text_utils import env_state_reward_wrapper
 
 class SokobanEnv(BaseEnv):
     GRID_LOOKUP = {
