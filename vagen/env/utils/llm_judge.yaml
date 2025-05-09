@@ -1,15 +1,22 @@
 # Model
 name: "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"
 temperature: 0.1
-max_tokens: 200
+max_tokens: 500
 
 # API
 max_parallel_requests: 10
 max_retries: 3
-request_timeout: 3
+request_timeout: 15
 
 # Log
 log_dir: "./logs/llm_judge"
+
+# WandB Configuration
+wandb:
+  enabled: true
+  project_name: "llm-judge"
+  run_name: null  # Auto-generated if null
+  resume: false
 
 # Prompt
 prompt_templates:
