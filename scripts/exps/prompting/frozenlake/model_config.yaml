@@ -31,9 +31,9 @@ models:
   #   max_tokens: 150
   #   temperature: 0.7
 
-  # gpt4o:
-  #   provider: openai
-  #   model_name: gpt-4o
+  # claude_3_sonnet:
+  #   provider: claude
+  #   model_name: claude-3-7-sonnet-20250219
   #   max_tokens: 150
   #   temperature: 0.7
   #   presence_penalty: 0.0
