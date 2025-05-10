@@ -13,7 +13,6 @@ from datetime import datetime
 from together import AsyncTogether
 
 # Import wandb logger
-from .llm_judge_utils import WandbLogger
 
 CONFIG_NAME = "llm_judge"
 CONFIG_PATH = "./"
