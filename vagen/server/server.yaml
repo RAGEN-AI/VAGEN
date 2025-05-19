@@ -16,7 +16,7 @@ svg:
     service: 2
 navigation:
   max_workers: 48
-  devices: [0,1,2,3]
+  devices: [0]
 primitive_skill:
   max_workers: 48
 
