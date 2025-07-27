@@ -48,8 +48,8 @@ def main_task(config, compute_score=None):
 
     # instantiate tokenizer
     from verl.utils import hf_tokenizer, hf_processor
-    tokenizer = hf_tokenizer(local_path)
-    processor = hf_processor(local_path, use_fast=True)  # used for multimodal LLM, could be none
+    tokenizer = hf_tokenizer(local_path, trust_remote_code=config.data.trust_remote_code)
+    processor = hf_processor(local_path, use_fast=True, trust_remote_code=config.data.trust_remote_code)  # used for multimodal LLM, could be none
 
     # define worker classes
     if config.actor_rollout_ref.actor.strategy == 'fsdp':

@@ -112,6 +112,53 @@ def handle_internvl_multimodal_data(
     return prompt_template, row_dict, None, raw_prompt
 
 
+def handle_kimivl_multimodal_data(
+    prompt_template: str,
+    row_dict: Dict,
+    image_data: List[PIL.Image.Image],
+    processor,
+    do_embedding: bool = True,
+) -> Tuple[str, Dict, Optional[torch.Tensor], str]:
+    """Handle multi-modal data for KimiVL models.
+    
+    Args:
+        prompt_template: Template string with <image> placeholders
+        row_dict: Dictionary to store processed data
+        image_data: List of PIL images
+        processor: InternVL processor
+        do_embedding: Whether to do embedding (True) or prepare for vllm (False)
+        
+    Returns:
+        Tuple of (prompt_template, row_dict, image_grid_thw, raw_prompt)
+    """
+    assert len(image_data) == prompt_template.count('<image>'), \
+        'Number of images does not match number of <image> in the prompt template'
+    
+    raw_prompt = prompt_template
+    row_dict['multi_modal_data'] = {'image': image_data} # vllm can automatically handle the data with <image>
+    image_grid_hws = None
+    
+    if do_embedding:
+        image_inputs = processor.image_processor(image_data, return_tensors='pt')
+        image_grid_hws = image_inputs['image_grid_hws']
+        row_dict['multi_modal_inputs'] = {key: val for key, val in image_inputs.items()}
+    
+    if image_grid_hws is not None:
+        merge_length = processor.image_processor.merge_kernel_size[0] * processor.image_processor.merge_kernel_size[1]
+        index = 0
+        while '<image>' in prompt_template:
+            prompt_template = prompt_template.replace(
+                '<image>',
+                '<|media_start|>' + '<|media_content|>' * (image_grid_hws[index].prod() // merge_length) +
+                '<|media_end|>',
+                1,
+            )
+            index += 1
+        
+
+    return prompt_template, row_dict, None, raw_prompt
+
+
 def detect_model_type(processor) -> str:
     """Detect model type based on processor characteristics.
     
@@ -122,11 +169,11 @@ def detect_model_type(processor) -> str:
         Model type string ('qwen' or 'internvl')
     """
     # Check if it's InternVL by looking for specific attributes
-    if hasattr(processor, 'tokenizer') and hasattr(processor.tokenizer, 'context_image_token'):
-        return 'internvl'
-    # Check if it's Qwen by looking for image_token attribute
-    elif hasattr(processor, 'image_token'):
+    if 'qwen' in processor.__class__.__name__.lower():
         return 'qwen'
+    elif 'intern' in processor.__class__.__name__.lower():
+        return 'internvl'
+    elif 'kimi' in processor.__class__.__name__.lower():
+        return 'kimivl'
     else:
-        # Default fallback - could also raise an error
-        return 'qwen' 
+        raise ValueError(f"Unsupported model type: {processor.__class__.__name__}. Supported types: 'qwen', 'internvl', 'kimivl'")

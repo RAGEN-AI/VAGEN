@@ -42,7 +42,7 @@ mkdir -p "data/$EXPERIMENT_NAME"
 # Create server session
 tmux new-session -d -s "$SERVER_SESSION"
 # Configure server session with conda and environment variables
-tmux send-keys -t "$SERVER_SESSION" "source activate vagen" C-m
+tmux send-keys -t "$SERVER_SESSION" "source activate vagen_kimi" C-m
 tmux send-keys -t "$SERVER_SESSION" "export CUDA_VISIBLE_DEVICES=$CUDA_DEVICES" C-m
 tmux send-keys -t "$SERVER_SESSION" "export VLLM_ATTENTION_BACKEND=XFORMERS" C-m
 tmux send-keys -t "$SERVER_SESSION" "export PYTHONHASHSEED=0" C-m
@@ -57,7 +57,7 @@ sleep 10  # Adjust as needed
 tmux new-session -d -s "$TRAIN_SESSION"
 # Configure training session with conda and environment variables
 tmux send-keys -t "$TRAIN_SESSION" "cd $SCRIPT_DIR" C-m
-tmux send-keys -t "$TRAIN_SESSION" "source activate vagen" C-m
+tmux send-keys -t "$TRAIN_SESSION" "source activate vagen_kimi" C-m
 tmux send-keys -t "$TRAIN_SESSION" "export CUDA_VISIBLE_DEVICES=$CUDA_DEVICES" C-m
 tmux send-keys -t "$TRAIN_SESSION" "export VLLM_ATTENTION_BACKEND=XFORMERS" C-m
 tmux send-keys -t "$TRAIN_SESSION" "export PYTHONHASHSEED=0" C-m
@@ -81,22 +81,23 @@ tmux send-keys -t "$TRAIN_SESSION" "python3 -m vagen.trainer.main_ppo \\
     data.max_trajectory_length=2400 \\
     data.image_key=images \\
     data.truncation=left \\
-    actor_rollout_ref.model.path=OpenGVLab/InternVL3-1B \\
+    +data.trust_remote_code=True \\
+    actor_rollout_ref.model.path=moonshotai/Kimi-VL-A3B-Instruct \\
     actor_rollout_ref.actor.optim.lr=1e-6 \\
-    actor_rollout_ref.model.use_remove_padding=False \\
+    actor_rollout_ref.model.use_remove_padding=True \\
     actor_rollout_ref.actor.ppo_mini_batch_size=32 \\
     actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=1 \\
     actor_rollout_ref.actor.use_kl_loss=False \\
     actor_rollout_ref.actor.kl_loss_coef=0.001 \\
     actor_rollout_ref.actor.kl_loss_type=mse \\
-    actor_rollout_ref.model.enable_gradient_checkpointing=True \\
+    actor_rollout_ref.model.enable_gradient_checkpointing=False \\
     +actor_rollout_ref.model.trust_remote_code=True \\
     actor_rollout_ref.actor.fsdp_config.param_offload=True \\
     actor_rollout_ref.actor.fsdp_config.optimizer_offload=True \\
     actor_rollout_ref.rollout.log_prob_micro_batch_size_per_gpu=1 \\
     actor_rollout_ref.rollout.tensor_model_parallel_size=2 \\
     actor_rollout_ref.rollout.name=vllm \\
-    actor_rollout_ref.rollout.gpu_memory_utilization=0.5 \\
+    actor_rollout_ref.rollout.gpu_memory_utilization=0.1 \\
     actor_rollout_ref.rollout.enable_chunked_prefill=False \\
     actor_rollout_ref.rollout.enforce_eager=False \\
     actor_rollout_ref.rollout.free_cache_engine=False \\
@@ -106,9 +107,9 @@ tmux send-keys -t "$TRAIN_SESSION" "python3 -m vagen.trainer.main_ppo \\
     actor_rollout_ref.rollout.top_p=0.95 \\
     actor_rollout_ref.rollout.temperature=0.7 \\
     critic.optim.lr=1e-5 \\
-    critic.model.use_remove_padding=False \\
-    critic.model.path=OpenGVLab/InternVL3-1B \\
-    critic.model.enable_gradient_checkpointing=True \\
+    critic.model.use_remove_padding=True \\
+    critic.model.path=moonshotai/Kimi-VL-A3B-Instruct \\
+    critic.model.enable_gradient_checkpointing=False \\
     critic.ppo_micro_batch_size_per_gpu=1 \\
     critic.model.fsdp_config.param_offload=False \\
     critic.model.fsdp_config.optimizer_offload=False \\
@@ -134,7 +135,7 @@ tmux send-keys -t "$TRAIN_SESSION" "python3 -m vagen.trainer.main_ppo \\
     rollout_manager.use_service=True \\
     rollout_manager.timeout=300 \\
     rollout_manager.base_url=\"http://localhost:$PORT\" \\
-    2>&1 | tee $EXPERIMENT_NAME.log" C-m
+    2>&1 | tee ${EXPERIMENT_NAME}_kimivl.log" C-m
 
 echo "-----------------------------------------"
 echo "Configuration Summary:"
