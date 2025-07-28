@@ -92,6 +92,7 @@ tmux send-keys -t "$TRAIN_SESSION" "python3 -m vagen.trainer.main_ppo \\
     actor_rollout_ref.actor.use_kl_loss=False \\
     actor_rollout_ref.actor.kl_loss_coef=0.001 \\
     actor_rollout_ref.actor.kl_loss_type=mse \\
+    actor_rollout_ref.actor.grad_norm_threshold=1e6 \\
     actor_rollout_ref.model.enable_gradient_checkpointing=False \\
     +actor_rollout_ref.model.trust_remote_code=True \\
     actor_rollout_ref.actor.fsdp_config.param_offload=True \\
@@ -99,7 +100,7 @@ tmux send-keys -t "$TRAIN_SESSION" "python3 -m vagen.trainer.main_ppo \\
     actor_rollout_ref.rollout.log_prob_micro_batch_size_per_gpu=1 \\
     actor_rollout_ref.rollout.tensor_model_parallel_size=4 \\
     actor_rollout_ref.rollout.name=vllm \\
-    actor_rollout_ref.rollout.gpu_memory_utilization=0.2 \\
+    actor_rollout_ref.rollout.gpu_memory_utilization=0.3 \\
     actor_rollout_ref.rollout.enable_chunked_prefill=False \\
     actor_rollout_ref.rollout.enforce_eager=False \\
     actor_rollout_ref.rollout.free_cache_engine=False \\
@@ -109,12 +110,13 @@ tmux send-keys -t "$TRAIN_SESSION" "python3 -m vagen.trainer.main_ppo \\
     actor_rollout_ref.rollout.top_p=0.95 \\
     actor_rollout_ref.rollout.temperature=0.7 \\
     critic.optim.lr=1e-5 \\
+    critic.grad_norm_threshold=1e6 \\
     critic.model.use_remove_padding=False \\
     critic.model.path=moonshotai/Kimi-VL-A3B-Instruct \\
     critic.model.enable_gradient_checkpointing=False \\
     critic.ppo_micro_batch_size_per_gpu=1 \\
-    critic.model.fsdp_config.param_offload=False \\
-    critic.model.fsdp_config.optimizer_offload=False \\
+    critic.model.fsdp_config.param_offload=True \\
+    critic.model.fsdp_config.optimizer_offload=True \\
     +critic.model.trust_remote_code=True \\
     algorithm.kl_ctrl.kl_coef=0.001 \\
     trainer.critic_warmup=0 \\
