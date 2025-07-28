@@ -491,6 +491,7 @@ class QwenVLRolloutManagerService():
             Dictionary containing the results of the step
         """
         for step in range(self.config.max_turns):
+            print(f'[DEBUG] step: {step}')
             input_batch_dict = self.generate_batch_for_rollout(step, self.config.window_size)
             if input_batch_dict is None:
                 break

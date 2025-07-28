@@ -21,7 +21,7 @@ pip install 'flask'
 echo "Installing flash-attn with no build isolation..."
 pip install flash-attn==2.7.4.post1
 
-pip install timm # for internvl
+pip install blobfile # for kimi-vl
 
 echo "Installing vagen package..."
 pip install -e .

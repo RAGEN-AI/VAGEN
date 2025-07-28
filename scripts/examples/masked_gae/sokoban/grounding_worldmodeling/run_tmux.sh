@@ -5,8 +5,10 @@ set -e  # Exit immediately if a command exits with a non-zero status
 read -p "Enter port number (default: 5000): " PORT_INPUT
 PORT=${PORT_INPUT:-5000}
 
-read -p "Enter CUDA devices (default: 0,1,2,3): " CUDA_DEVICES
-CUDA_DEVICES=${CUDA_DEVICES:-0,1,2,3}
+read -p "Enter CUDA devices (default: 0,1,2,3,4,5,6,7): " CUDA_DEVICES
+CUDA_DEVICES=${CUDA_DEVICES:-0,1,2,3,4,5,6,7}
+
+
 
 # Get the directory of the script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -78,13 +80,13 @@ tmux send-keys -t "$TRAIN_SESSION" "python3 -m vagen.trainer.main_ppo \\
     data.train_batch_size=128 \\
     data.max_prompt_length=1024 \\
     data.max_response_length=200 \\
-    data.max_trajectory_length=2400 \\
+    data.max_trajectory_length=3600 \\
     data.image_key=images \\
     data.truncation=left \\
     +data.trust_remote_code=True \\
     actor_rollout_ref.model.path=moonshotai/Kimi-VL-A3B-Instruct \\
     actor_rollout_ref.actor.optim.lr=1e-6 \\
-    actor_rollout_ref.model.use_remove_padding=True \\
+    actor_rollout_ref.model.use_remove_padding=False \\
     actor_rollout_ref.actor.ppo_mini_batch_size=32 \\
     actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=1 \\
     actor_rollout_ref.actor.use_kl_loss=False \\
@@ -95,9 +97,9 @@ tmux send-keys -t "$TRAIN_SESSION" "python3 -m vagen.trainer.main_ppo \\
     actor_rollout_ref.actor.fsdp_config.param_offload=True \\
     actor_rollout_ref.actor.fsdp_config.optimizer_offload=True \\
     actor_rollout_ref.rollout.log_prob_micro_batch_size_per_gpu=1 \\
-    actor_rollout_ref.rollout.tensor_model_parallel_size=2 \\
+    actor_rollout_ref.rollout.tensor_model_parallel_size=4 \\
     actor_rollout_ref.rollout.name=vllm \\
-    actor_rollout_ref.rollout.gpu_memory_utilization=0.1 \\
+    actor_rollout_ref.rollout.gpu_memory_utilization=0.2 \\
     actor_rollout_ref.rollout.enable_chunked_prefill=False \\
     actor_rollout_ref.rollout.enforce_eager=False \\
     actor_rollout_ref.rollout.free_cache_engine=False \\
@@ -107,7 +109,7 @@ tmux send-keys -t "$TRAIN_SESSION" "python3 -m vagen.trainer.main_ppo \\
     actor_rollout_ref.rollout.top_p=0.95 \\
     actor_rollout_ref.rollout.temperature=0.7 \\
     critic.optim.lr=1e-5 \\
-    critic.model.use_remove_padding=True \\
+    critic.model.use_remove_padding=False \\
     critic.model.path=moonshotai/Kimi-VL-A3B-Instruct \\
     critic.model.enable_gradient_checkpointing=False \\
     critic.ppo_micro_batch_size_per_gpu=1 \\
@@ -119,7 +121,7 @@ tmux send-keys -t "$TRAIN_SESSION" "python3 -m vagen.trainer.main_ppo \\
     trainer.logger=['console','wandb'] \\
     trainer.project_name='vagen_new' \\
     trainer.experiment_name=$EXPERIMENT_NAME \\
-    trainer.n_gpus_per_node=2 \\
+    trainer.n_gpus_per_node=8 \\
     trainer.nnodes=1 \\
     trainer.save_freq=250 \\
     trainer.test_freq=20 \\
@@ -129,6 +131,7 @@ tmux send-keys -t "$TRAIN_SESSION" "python3 -m vagen.trainer.main_ppo \\
     rollout_manager.use_multi_turn_reward=False \\
     rollout_manager.use_loss_mask=True \\
     rollout_manager.use_gae_mask=True \\
+    rollout_manager.special_token_for_loss_mask='[\"[BOS]\",\"[EOS]\"]' \\
     trainer.val_before_train=True \\
     trainer.val_generations_to_log_to_wandb=8 \\
     rollout_manager.n_trajectory=1 \\

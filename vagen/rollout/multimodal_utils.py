@@ -17,8 +17,10 @@ def get_multimodal_handler(model_type: str):
         return handle_qwen_multimodal_data
     elif model_type.lower() == 'internvl':
         return handle_internvl_multimodal_data
+    elif model_type.lower() == 'kimivl':
+        return handle_kimivl_multimodal_data
     else:
-        raise ValueError(f"Unsupported model type: {model_type}. Supported types: 'qwen', 'internvl'")
+        raise ValueError(f"Unsupported model type: {model_type}. Supported types: 'qwen', 'internvl', 'kimivl'")
 
 
 def handle_qwen_multimodal_data(
@@ -134,7 +136,8 @@ def handle_kimivl_multimodal_data(
     assert len(image_data) == prompt_template.count('<image>'), \
         'Number of images does not match number of <image> in the prompt template'
     
-    raw_prompt = prompt_template
+    # raw_prompt = prompt_template
+    raw_prompt = prompt_template.replace('<image>', '<|media_start|><|media_pad|><|media_end|>')
     row_dict['multi_modal_data'] = {'image': image_data} # vllm can automatically handle the data with <image>
     image_grid_hws = None
     
@@ -149,7 +152,7 @@ def handle_kimivl_multimodal_data(
         while '<image>' in prompt_template:
             prompt_template = prompt_template.replace(
                 '<image>',
-                '<|media_start|>' + '<|media_content|>' * (image_grid_hws[index].prod() // merge_length) +
+                '<|media_start|>' + '<|media_pad|>' * (image_grid_hws[index].prod() // merge_length) +
                 '<|media_end|>',
                 1,
             )
