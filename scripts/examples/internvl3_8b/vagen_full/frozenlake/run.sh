@@ -9,6 +9,7 @@ CUDA_DEVICES="0,1,2,3,4,5,6,7"
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Extract experiment name from the path
+# This will take the last 3 parts of the path: format/sokoban/free_think
 EXPERIMENT_NAME=$(echo $SCRIPT_DIR | rev | cut -d'/' -f1-3 | rev | tr '/' '-')
 echo "Experiment name: $EXPERIMENT_NAME"
 echo "Using port: $PORT"
@@ -27,7 +28,7 @@ source activate vagen
 
 echo "Starting server in background..."
 # Start server in background and save PID
-python -m vagen.server.server server.port=$PORT use_state_reward=False &
+python -m vagen.server.server server.port=$PORT use_state_reward=True &
 SERVER_PID=$!
 echo "Server started with PID: $SERVER_PID"
 
@@ -44,50 +45,37 @@ cleanup() {
 # Set trap to cleanup on script exit
 trap cleanup EXIT INT TERM
 
-# Wait for server to start
-echo "Waiting for server to start on port $PORT..."
+# Wait for server to be ready
+echo "Waiting for server to be ready..."
 sleep 15
 
-# Test if server is responsive
-echo "Testing server connection..."
-for i in {1..10}; do
-    if curl -s "http://localhost:$PORT/health" > /dev/null 2>&1; then
-        echo "Server is ready!"
-        break
-    elif [ $i -eq 10 ]; then
-        echo "Server failed to start properly"
-        exit 1
-    else
-        echo "Waiting for server... (attempt $i/10)"
-        sleep 2
-    fi
-done
-
 echo "Creating dataset..."
-# Create the dataset
+# Change to script directory
+cd "$SCRIPT_DIR"
+
+# First create the dataset
 python -m vagen.env.create_dataset \
     --yaml_path "$SCRIPT_DIR/env_config.yaml" \
-    --train_path "$SCRIPT_DIR/data/$EXPERIMENT_NAME/train.parquet" \
-    --test_path "$SCRIPT_DIR/data/$EXPERIMENT_NAME/test.parquet" \
-    2>&1 | tee "$SCRIPT_DIR/server.log"
+    --train_path "data/$EXPERIMENT_NAME/train.parquet" \
+    --test_path "data/$EXPERIMENT_NAME/test.parquet"
 
 echo "Starting training..."
-# Start the training (output directly to console)
-cd "$SCRIPT_DIR"
-set -x  # Enable command echoing
+# Enable command echoing for debugging
+set -x
 
+# Start the training (output directly to console)
 python3 -m vagen.trainer.main_ppo \
-    algorithm.adv_estimator=masked_gae \
-    algorithm.high_level_gamma=0.95 \
-    data.train_files="$SCRIPT_DIR/data/$EXPERIMENT_NAME/train.parquet" \
-    data.val_files="$SCRIPT_DIR/data/$EXPERIMENT_NAME/test.parquet" \
-    data.train_batch_size=128 \
+    algorithm.adv_estimator=bi_level_gae \
+    algorithm.high_level_gamma=1.0 \
+    data.train_files=data/$EXPERIMENT_NAME/train.parquet \
+    data.val_files=data/$EXPERIMENT_NAME/test.parquet \
+    data.train_batch_size=64 \
     data.max_prompt_length=1024 \
     data.max_response_length=200 \
     data.max_trajectory_length=2400 \
     data.image_key=images \
     data.truncation=left \
-    actor_rollout_ref.model.path=Qwen/Qwen2.5-VL-3B-Instruct \
+    actor_rollout_ref.model.path=OpenGVLab/InternVL3-8B \
     actor_rollout_ref.actor.optim.lr=1e-6 \
     actor_rollout_ref.model.use_remove_padding=True \
     actor_rollout_ref.actor.ppo_mini_batch_size=32 \
@@ -99,9 +87,9 @@ python3 -m vagen.trainer.main_ppo \
     actor_rollout_ref.actor.fsdp_config.param_offload=True \
     actor_rollout_ref.actor.fsdp_config.optimizer_offload=True \
     actor_rollout_ref.rollout.log_prob_micro_batch_size_per_gpu=1 \
-    actor_rollout_ref.rollout.tensor_model_parallel_size=2 \
+    actor_rollout_ref.rollout.tensor_model_parallel_size=4 \
     actor_rollout_ref.rollout.name=vllm \
-    actor_rollout_ref.rollout.gpu_memory_utilization=0.1 \
+    actor_rollout_ref.rollout.gpu_memory_utilization=0.2 \
     actor_rollout_ref.rollout.enable_chunked_prefill=False \
     actor_rollout_ref.rollout.enforce_eager=False \
     actor_rollout_ref.rollout.free_cache_engine=False \
@@ -112,7 +100,7 @@ python3 -m vagen.trainer.main_ppo \
     actor_rollout_ref.rollout.temperature=0.7 \
     critic.optim.lr=1e-5 \
     critic.model.use_remove_padding=True \
-    critic.model.path=Qwen/Qwen2.5-VL-3B-Instruct \
+    critic.model.path=OpenGVLab/InternVL3-8B \
     critic.model.enable_gradient_checkpointing=True \
     critic.ppo_micro_batch_size_per_gpu=1 \
     critic.model.fsdp_config.param_offload=False \
@@ -129,14 +117,18 @@ python3 -m vagen.trainer.main_ppo \
     trainer.total_training_steps=300 \
     rollout_manager.max_turns=3 \
     rollout_manager.window_size=5 \
-    rollout_manager.use_multi_turn_reward=False \
+    rollout_manager.use_multi_turn_reward=True \
     rollout_manager.use_loss_mask=True \
     rollout_manager.use_gae_mask=True \
     trainer.val_before_train=True \
     trainer.val_generations_to_log_to_wandb=8 \
-    rollout_manager.n_trajectory=1 \
+    rollout_manager.n_trajectory=2 \
     rollout_manager.use_service=True \
     rollout_manager.timeout=300 \
-    rollout_manager.base_url="http://localhost:$PORT"
+    rollout_manager.base_url="http://localhost:$PORT" \
+    actor_rollout_ref.actor.grad_norm_threshold=1e6 \
+    critic.grad_norm_threshold=1e6 \
+    2>&1 | tee $EXPERIMENT_NAME.log
 
-echo "Training completed!" 
+echo "Training completed!"
+echo "Server will be automatically stopped."
