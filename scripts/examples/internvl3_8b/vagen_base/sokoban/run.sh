@@ -132,6 +132,10 @@ python3 -m vagen.trainer.main_ppo \
     rollout_manager.base_url="http://localhost:$PORT" \
     actor_rollout_ref.actor.grad_norm_threshold=1e6 \
     critic.grad_norm_threshold=1e6 \
+    critic.model.use_remove_padding=False \
+    +critic.model.trust_remote_code=True \
+    +actor_rollout_ref.model.trust_remote_code=True \
+    actor_rollout_ref.model.use_remove_padding=False \
     2>&1 | tee $EXPERIMENT_NAME.log
 
 echo "Training completed!"
