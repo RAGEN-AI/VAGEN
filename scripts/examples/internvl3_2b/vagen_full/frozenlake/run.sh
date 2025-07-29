@@ -3,7 +3,7 @@ set -e  # Exit immediately if a command exits with a non-zero status
 
 # Configuration - Set these values manually
 PORT=5000
-CUDA_DEVICES="0,1,2,3"
+CUDA_DEVICES="0,1"
 
 # Get the directory of the script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -75,7 +75,7 @@ python3 -m vagen.trainer.main_ppo \
     data.max_trajectory_length=2400 \
     data.image_key=images \
     data.truncation=left \
-    actor_rollout_ref.model.path=OpenGVLab/InternVL3-8B \
+    actor_rollout_ref.model.path=OpenGVLab/InternVL3-2B \
     actor_rollout_ref.actor.optim.lr=1e-6 \
     actor_rollout_ref.model.use_remove_padding=True \
     actor_rollout_ref.actor.ppo_mini_batch_size=32 \
@@ -87,9 +87,9 @@ python3 -m vagen.trainer.main_ppo \
     actor_rollout_ref.actor.fsdp_config.param_offload=True \
     actor_rollout_ref.actor.fsdp_config.optimizer_offload=True \
     actor_rollout_ref.rollout.log_prob_micro_batch_size_per_gpu=1 \
-    actor_rollout_ref.rollout.tensor_model_parallel_size=4 \
+    actor_rollout_ref.rollout.tensor_model_parallel_size=2 \
     actor_rollout_ref.rollout.name=vllm \
-    actor_rollout_ref.rollout.gpu_memory_utilization=0.4 \
+    actor_rollout_ref.rollout.gpu_memory_utilization=0.2 \
     actor_rollout_ref.rollout.enable_chunked_prefill=False \
     actor_rollout_ref.rollout.enforce_eager=False \
     actor_rollout_ref.rollout.free_cache_engine=False \
@@ -100,7 +100,7 @@ python3 -m vagen.trainer.main_ppo \
     actor_rollout_ref.rollout.temperature=0.7 \
     critic.optim.lr=1e-5 \
     critic.model.use_remove_padding=True \
-    critic.model.path=OpenGVLab/InternVL3-8B \
+    critic.model.path=OpenGVLab/InternVL3-2B \
     critic.model.enable_gradient_checkpointing=True \
     critic.ppo_micro_batch_size_per_gpu=1 \
     critic.model.fsdp_config.param_offload=False \
@@ -110,7 +110,7 @@ python3 -m vagen.trainer.main_ppo \
     trainer.logger=['console','wandb'] \
     trainer.project_name='vagen_new' \
     trainer.experiment_name=$EXPERIMENT_NAME \
-    trainer.n_gpus_per_node=4 \
+    trainer.n_gpus_per_node=2 \
     trainer.nnodes=1 \
     trainer.save_freq=500 \
     trainer.test_freq=20 \

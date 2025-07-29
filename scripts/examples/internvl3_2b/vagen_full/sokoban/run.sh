@@ -2,8 +2,8 @@
 set -e  # Exit immediately if a command exits with a non-zero status
 
 # Configuration - Set these values manually
-PORT=5000
-CUDA_DEVICES="0,1,2,3"
+PORT=5001
+CUDA_DEVICES="0,1"
 
 # Get the directory of the script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -45,6 +45,10 @@ cleanup() {
 # Set trap to cleanup on script exit
 trap cleanup EXIT INT TERM
 
+# Wait for server to start
+echo "Waiting for server to start on port $PORT..."
+sleep 10
+
 # Wait for server to be ready
 echo "Waiting for server to be ready..."
 sleep 15
@@ -66,16 +70,16 @@ set -x
 # Start the training (output directly to console)
 python3 -m vagen.trainer.main_ppo \
     algorithm.adv_estimator=bi_level_gae \
-    algorithm.high_level_gamma=1.0 \
+    algorithm.high_level_gamma=0.95 \
     data.train_files=data/$EXPERIMENT_NAME/train.parquet \
     data.val_files=data/$EXPERIMENT_NAME/test.parquet \
-    data.train_batch_size=64 \
+    data.train_batch_size=128 \
     data.max_prompt_length=1024 \
     data.max_response_length=200 \
     data.max_trajectory_length=2400 \
     data.image_key=images \
     data.truncation=left \
-    actor_rollout_ref.model.path=OpenGVLab/InternVL3-8B \
+    actor_rollout_ref.model.path=OpenGVLab/InternVL3-2B \
     actor_rollout_ref.actor.optim.lr=1e-6 \
     actor_rollout_ref.model.use_remove_padding=True \
     actor_rollout_ref.actor.ppo_mini_batch_size=32 \
@@ -87,9 +91,9 @@ python3 -m vagen.trainer.main_ppo \
     actor_rollout_ref.actor.fsdp_config.param_offload=True \
     actor_rollout_ref.actor.fsdp_config.optimizer_offload=True \
     actor_rollout_ref.rollout.log_prob_micro_batch_size_per_gpu=1 \
-    actor_rollout_ref.rollout.tensor_model_parallel_size=4 \
+    actor_rollout_ref.rollout.tensor_model_parallel_size=2 \
     actor_rollout_ref.rollout.name=vllm \
-    actor_rollout_ref.rollout.gpu_memory_utilization=0.4 \
+    actor_rollout_ref.rollout.gpu_memory_utilization=0.2 \
     actor_rollout_ref.rollout.enable_chunked_prefill=False \
     actor_rollout_ref.rollout.enforce_eager=False \
     actor_rollout_ref.rollout.free_cache_engine=False \
@@ -100,7 +104,7 @@ python3 -m vagen.trainer.main_ppo \
     actor_rollout_ref.rollout.temperature=0.7 \
     critic.optim.lr=1e-5 \
     critic.model.use_remove_padding=True \
-    critic.model.path=OpenGVLab/InternVL3-8B \
+    critic.model.path=OpenGVLab/InternVL3-2B \
     critic.model.enable_gradient_checkpointing=True \
     critic.ppo_micro_batch_size_per_gpu=1 \
     critic.model.fsdp_config.param_offload=False \
@@ -110,7 +114,7 @@ python3 -m vagen.trainer.main_ppo \
     trainer.logger=['console','wandb'] \
     trainer.project_name='vagen_new' \
     trainer.experiment_name=$EXPERIMENT_NAME \
-    trainer.n_gpus_per_node=4 \
+    trainer.n_gpus_per_node=2 \
     trainer.nnodes=1 \
     trainer.save_freq=500 \
     trainer.test_freq=20 \
@@ -122,7 +126,7 @@ python3 -m vagen.trainer.main_ppo \
     rollout_manager.use_gae_mask=True \
     trainer.val_before_train=True \
     trainer.val_generations_to_log_to_wandb=8 \
-    rollout_manager.n_trajectory=2 \
+    rollout_manager.n_trajectory=1 \
     rollout_manager.use_service=True \
     rollout_manager.timeout=300 \
     rollout_manager.base_url="http://localhost:$PORT" \
