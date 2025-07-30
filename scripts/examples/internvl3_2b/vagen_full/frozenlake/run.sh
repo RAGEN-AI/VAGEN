@@ -2,8 +2,8 @@
 set -e  # Exit immediately if a command exits with a non-zero status
 
 # Configuration - Set these values manually
-PORT=5000
-CUDA_DEVICES="0,1"
+PORT=5002
+CUDA_DEVICES="4,5"
 
 # Get the directory of the script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -126,7 +126,7 @@ python3 -m vagen.trainer.main_ppo \
     rollout_manager.use_service=True \
     rollout_manager.timeout=300 \
     rollout_manager.base_url="http://localhost:$PORT" \
-    actor_rollout_ref.actor.grad_norm_threshold=1e6 \
+    actor_rollout_ref.actor.grad_norm_threshold=1e3 \
     critic.grad_norm_threshold=1e6 \
     critic.model.use_remove_padding=False \
     +critic.model.trust_remote_code=True \

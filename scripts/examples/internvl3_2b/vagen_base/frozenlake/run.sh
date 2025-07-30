@@ -126,7 +126,7 @@ python3 -m vagen.trainer.main_ppo \
     rollout_manager.use_service=True \
     rollout_manager.timeout=300 \
     rollout_manager.base_url="http://localhost:$PORT" \
-    actor_rollout_ref.actor.grad_norm_threshold=1e6 \
+    actor_rollout_ref.actor.grad_norm_threshold=1e3 \
     critic.grad_norm_threshold=1e6 \
     critic.model.use_remove_padding=False \
     +critic.model.trust_remote_code=True \
