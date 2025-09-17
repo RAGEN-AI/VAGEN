@@ -16,6 +16,13 @@ from .prompt import (
 from .env_config import SokobanEnvConfig
 from vagen.env.utils.state_reward_text_utils import env_state_reward_wrapper
 from .utils import sokoban_state_to_sentences, convert_sokoban_state_to_relative_list
+import hashlib
+
+def stable_hash_seed(seed: int | str, mod: int = 2**32) -> int:
+    s = str(seed).encode("utf-8")
+    h = hashlib.sha256(s).digest()
+    return int.from_bytes(h[:8], "little") % mod
+
 class SokobanEnv(BaseEnv):
     GRID_LOOKUP = {
         0: " # \t",  # wall
@@ -65,7 +72,7 @@ class SokobanEnv(BaseEnv):
             except (RuntimeError, RuntimeWarning) as e:
                 print("[SOKOBAN] Runtime Error/Warning: {}".format(e))
                 print("[SOKOBAN] Retry . . .")
-                next_seed = abs(hash(str(seed))) % (2 ** 32) if seed is not None else None
+                next_seed = stable_hash_seed(seed) if seed is not None else None
                 return self.reset(next_seed)
     
             self.env.player_position = np.argwhere(self.env.room_state == 5)[0]

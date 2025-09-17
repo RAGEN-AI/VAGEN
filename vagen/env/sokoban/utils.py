@@ -36,7 +36,10 @@ def generate_seeds(size,config,min_actions_to_succeed=5,seed=0,n_candidate: int 
     results = list(tqdm(pool.imap(process_seed_partial, seeds), total=len(seeds), desc="Processing seeds"))
     pool.close()
     pool.join()
-
+    results.sort(key=lambda x: x[0])
+    # random shuffle the results with seed
+    random.seed(seed)
+    random.shuffle(results)
     valid_seeds_with_actions = [(seed, gt_action_sequence) for seed, gt_action_sequence in results if gt_action_sequence and len(gt_action_sequence) <= min_actions_to_succeed]
     seed_to_length = {seed: len(gt_action_sequence) for seed, gt_action_sequence in valid_seeds_with_actions}
     valid_seeds = [seed for seed, _ in valid_seeds_with_actions]
